@@ -1,0 +1,19 @@
+This is your normal post page
+<a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+<div>Date: {{ page.date }}</div>
+<div>Word Count: {{ page.word_count }}</div>
+<div>Reading Time: {{ page.reading_time }}</div>
+<div>Tags: 
+  {% for tag in page.taxonomies.tags %}
+    <a href="/tags/{{ tag }}">{{ tag }}</a>
+  {% endfor %}
+</div>
+{{ page.content | safe }}
+
+{% if page.earlier %}
+  Earlier: <a href="{{ page.earlier.permalink | safe }}">{{ page.earlier.title }}</a>
+{% endif %}
+
+{% if page.later %}
+  Later: <a href="{{ page.later.permalink | safe }}">{{ page.later.title }}</a>
+{% endif %}

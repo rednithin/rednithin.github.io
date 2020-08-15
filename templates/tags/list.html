@@ -1,0 +1,9 @@
+This is your taxonomy list page
+
+<ul>
+  {% for term in terms %}
+      <li>
+          <a href="{{ term.slug | safe }}">{{ term.name }}</a>
+      </li>
+  {% endfor %}
+</ul>

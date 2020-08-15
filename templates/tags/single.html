@@ -1,0 +1,21 @@
+This is your taxonomy single page
+
+<ul>
+  {% for page in paginator.pages %}
+      <li>
+          <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+          <div>Date: {{ page.date }}</div>
+          <div>Word Count: {{ page.word_count }}</div>
+          <div>Reading Time: {{ page.reading_time }}</div>
+          <div>{{ page.date }}</div>
+      </li>
+  {% endfor %}
+</ul>
+
+{% if paginator.previous %}
+  <a href="{{ paginator.previous }}">Previous</a>
+{% endif %}
+
+{% if paginator.next %}
+  <a href="{{ paginator.next }}">Next</a>
+{% endif %}
