@@ -1,1 +1,16 @@
-This is index page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block title %}
+    <title>
+      {{config.title}}
+    </title>
+  {% endblock %}
+  <link rel="stylesheet" href="{{ get_url(path='styles/styles.css?t={{config.build_timestamp}}') }}" />
+</head>
+<body>
+  Hello
+</body>
+</html>
