@@ -60,14 +60,17 @@
         </label>
         <input class="hidden" type="checkbox" name="menu-toggle" id="menu-toggle">
         
-        <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+        <div 
+          class="hidden md:flex md:items-center md:w-auto w-full border-t md:border-t-0 pt-4 md:pt-0" 
+          id="menu"
+        >
           <nav>
-            <ul class="md:flex items-center justify-between">
-              <li><a class="pl-4 block" href="/blog">Blog</a></li>
-              <li><a class="pl-4 block" href="/contact">Contact</a></li>
-              <li><a class="pl-4 block" href="/about">About</a></li>
-              <li><a class="pl-4 block" href="/tags">Tags</a></li>
-              <li><a class="pl-4 block" href="/resume">Resume</a></li>
+            <ul class="md:flex items-center justify-between md:text-left">
+              <li><a class="pl-4 block pb-2 md:pb-0 underline md:no-underline" href="/blog">Blog</a></li>
+              <li><a class="pl-4 block pb-2 md:pb-0 underline md:no-underline" href="/contact">Contact</a></li>
+              <li><a class="pl-4 block pb-2 md:pb-0 underline md:no-underline" href="/about">About</a></li>
+              <li><a class="pl-4 block pb-2 md:pb-0 underline md:no-underline" href="/tags">Tags</a></li>
+              <li><a class="pl-4 block pb-2 md:pb-0 underline md:no-underline" href="/resume">Resume</a></li>
             </ul>
           </nav>
           <a href="/">
@@ -90,7 +93,7 @@
     </h1>
     <div class="mt-2">
       October 02, 2012 
-      - 647 words
+      - 603 words
       - 4 min read
     </div>
     <div class="mt-1 text-gray-600">
@@ -102,17 +105,7 @@
     </div>
     <div class="mt-4 markdown-content">
       <p>This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article.</p>
-<span id="continue-reading"></span>
-<p><strong>Advertisement :)</strong></p>
-<ul>
-<li><strong><a href="https://nodeca.github.io/pica/demo/">pica</a></strong> - high quality and fast image
-resize in browser.</li>
-<li><strong><a href="https://github.com/nodeca/babelfish/">babelfish</a></strong> - developer friendly
-i18n with plurals support and easy syntax.</li>
-</ul>
-<p>You will like those projects!</p>
-<hr />
-<h1 id="h1-heading-8">h1 Heading 8-)</h1>
+<span id="continue-reading"></span><h1 id="h1-heading-8">h1 Heading 8-)</h1>
 <h2 id="h2-heading">h2 Heading</h2>
 <h3 id="h3-heading">h3 Heading</h3>
 <h4 id="h4-heading">h4 Heading</h4>
@@ -120,13 +113,8 @@ i18n with plurals support and easy syntax.</li>
 <h6 id="h6-heading">h6 Heading</h6>
 <h2 id="horizontal-rules">Horizontal Rules</h2>
 <hr />
-<hr />
-<hr />
 <h2 id="typographic-replacements">Typographic replacements</h2>
-<p>Enable typographer option to see result.</p>
-<p>(c) (C) (r) (R) (tm) (TM) (p) (P) +-</p>
-<p>test.. test... test..... test?..... test!....</p>
-<p>!!!!!! ???? ,,  -- ---</p>
+<p>© &amp;</p>
 <p>&quot;Smartypants, double quotes&quot; and 'single quotes'</p>
 <h2 id="emphasis">Emphasis</h2>
 <p><strong>This is bold text</strong></p>
@@ -135,6 +123,9 @@ i18n with plurals support and easy syntax.</li>
 <p><em>This is italic text</em></p>
 <p><del>Strikethrough</del></p>
 <h2 id="blockquotes">Blockquotes</h2>
+<blockquote>
+<p>&quot;Blockquotes can also be nested&quot;</p>
+</blockquote>
 <blockquote>
 <p>Blockquotes can also be nested...</p>
 <blockquote>
@@ -191,23 +182,21 @@ i18n with plurals support and easy syntax.</li>
 <h2 id="code">Code</h2>
 <p>Inline <code>code</code></p>
 <p>Indented code</p>
-<pre style="background-color:#ffffff;">
+<pre style="background-color:#eff1f5;">
 <code>// Some comments
 line 1 of code
 line 2 of code
 line 3 of code
 </code></pre>
 <p>Block code &quot;fences&quot;</p>
-<pre style="background-color:#ffffff;">
-<code><span style="color:#4d4d4c;">Sample text here...
+<pre style="background-color:#eff1f5;">
+<code><span style="color:#4f5b66;">Sample text here...
 </span></code></pre>
 <p>Syntax highlighting</p>
-<pre style="background-color:#ffffff;">
-<code><span style="color:#8959a8;">var </span><span style="color:#c82829;">foo </span><span style="color:#3e999f;">= </span><span style="color:#8959a8;">function </span><span style="color:#4d4d4c;">(</span><span style="color:#f5871f;">bar</span><span style="color:#4d4d4c;">) {
-  </span><span style="color:#8959a8;">return </span><span style="color:#c82829;">bar</span><span style="color:#3e999f;">++</span><span style="color:#4d4d4c;">;
-};
+<pre style="background-color:#eff1f5;">
+<code><span style="color:#b48ead;">var </span><span style="color:#bf616a;">foo </span><span style="color:#4f5b66;">= </span><span style="color:#b48ead;">function </span><span style="color:#4f5b66;">(bar) { </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">bar</span><span style="color:#4f5b66;">++; };
 
-</span><span style="color:#c99e00;">console</span><span style="color:#4271ae;">.log(</span><span style="color:#c82829;">foo</span><span style="color:#4271ae;">(</span><span style="color:#f5871f;">5</span><span style="color:#4271ae;">))</span><span style="color:#4d4d4c;">;
+console.</span><span style="color:#96b5b4;">log</span><span style="color:#4f5b66;">(</span><span style="color:#bf616a;">foo</span><span style="color:#4f5b66;">(</span><span style="color:#d08770;">5</span><span style="color:#4f5b66;">));
 </span></code></pre><h2 id="tables">Tables</h2>
 <table><thead><tr><th>Option</th><th>Description</th></tr></thead><tbody>
 <tr><td>data</td><td>path to data files to supply the data that will be passed into templates.</td></tr>
@@ -223,7 +212,6 @@ line 3 of code
 <h2 id="links">Links</h2>
 <p><a href="http://dev.nodeca.com">link text</a></p>
 <p><a href="http://nodeca.github.io/pica/demo/" title="title text!">link with title</a></p>
-<p>Autoconverted link https://github.com/nodeca/pica (enable linkify to see)</p>
 <h2 id="images">Images</h2>
 <p><img src="https://octodex.github.com/images/minion.png" alt="Minion" />
 <img src="https://octodex.github.com/images/stormtroopocat.jpg" alt="Stormtroopocat" title="The Stormtroopocat" /></p>
@@ -243,11 +231,14 @@ line 3 of code
 <ul>
 <li>19^th^</li>
 <li>H~2~O</li>
+<li>This is some <sup>superscript</sup> text.</li>
 </ul>
 <h3 id="ins"><a href="https://github.com/markdown-it/markdown-it-ins">&lt;ins&gt;</a></h3>
-<p>++Inserted text++</p>
+<p>++Inserted text++
+<ins>Inserted text</ins></p>
 <h3 id="mark"><a href="https://github.com/markdown-it/markdown-it-mark">&lt;mark&gt;</a></h3>
-<p>==Marked text==</p>
+<p>==Marked text==
+<mark>Marked text</mark></p>
 <h3 id="footnotes"><a href="https://github.com/markdown-it/markdown-it-footnote">Footnotes</a></h3>
 <p>Footnote 1 link<sup class="footnote-reference"><a href="#first">1</a></sup>.</p>
 <p>Footnote 2 link<sup class="footnote-reference"><a href="#second">2</a></sup>.</p>
@@ -256,7 +247,7 @@ line 3 of code
 <div class="footnote-definition" id="first"><sup class="footnote-definition-label">1</sup>
 <p>Footnote <strong>can have markup</strong></p>
 </div>
-<pre style="background-color:#ffffff;">
+<pre style="background-color:#eff1f5;">
 <code>and multiple paragraphs.
 </code></pre>
 <div class="footnote-definition" id="second"><sup class="footnote-definition-label">2</sup>
@@ -264,15 +255,12 @@ line 3 of code
 </div>
 <h3 id="definition-lists"><a href="https://github.com/markdown-it/markdown-it-deflist">Definition lists</a></h3>
 <p>Term 1</p>
-<p>:   Definition 1
+<p>: Definition 1
 with lazy continuation.</p>
-<p>Term 2 with <em>inline markup</em></p>
-<p>:   Definition 2</p>
-<pre style="background-color:#ffffff;">
-<code>    { some code, part of Definition 2 }
-
-Third paragraph of definition 2.
-</code></pre>
+<p>Term 2 with <em>inline markup</em> ↩︎</p>
+<p>: Definition 2
+{ some code, part of Definition 2 }</p>
+<p>Third paragraph of definition 2.</p>
 <p><em>Compact style:</em></p>
 <p>Term 1
 ~ Definition 1</p>
@@ -284,9 +272,6 @@ Third paragraph of definition 2.
 <p>It converts &quot;HTML&quot;, but keep intact partial entries like &quot;xxxHTMLyyy&quot; and so on.</p>
 <p>*[HTML]: Hyper Text Markup Language</p>
 <h3 id="custom-containers"><a href="https://github.com/markdown-it/markdown-it-container">Custom containers</a></h3>
-<p>::: warning
-<em>here be dragons</em>
-:::</p>
 <div >
   <iframe
       src="https://www.youtube.com/embed/dQw4w9WgXcQ"
@@ -326,6 +311,5 @@ Third paragraph of definition 2.
     </footer>
   
 
-  <script src="https://cdn.jsdelivr.net/npm/prerender_all@1.1.0/prerender.js" integrity="sha256-24v6xZyfIpefNGAWj+r65XOkqCkF9joivvLRloIyccQ=" crossorigin="anonymous"></script>
 </body>
 </html>
