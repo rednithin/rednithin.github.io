@@ -11,18 +11,10 @@
     </url>
     <url>
         <loc>https://rednithin.github.io/blog/first/</loc>
-        <lastmod>2012-10-02</lastmod>
+        <lastmod>2020-08-16</lastmod>
     </url>
     <url>
         <loc>https://rednithin.github.io/blog/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://rednithin.github.io/blog/second/</loc>
-        <lastmod>2012-10-03</lastmod>
-    </url>
-    <url>
-        <loc>https://rednithin.github.io/blog/third/</loc>
-        <lastmod>2012-10-04</lastmod>
     </url>
     <url>
         <loc>https://rednithin.github.io/contact/</loc>
@@ -34,15 +26,15 @@
         <loc>https://rednithin.github.io/tags/</loc>
     </url>
     <url>
-        <loc>https://rednithin.github.io/tags/rust/</loc>
+        <loc>https://rednithin.github.io/tags/cheatsheet/</loc>
     </url>
     <url>
-        <loc>https://rednithin.github.io/tags/rust/page/1/</loc>
+        <loc>https://rednithin.github.io/tags/cheatsheet/page/1/</loc>
     </url>
     <url>
-        <loc>https://rednithin.github.io/tags/web/</loc>
+        <loc>https://rednithin.github.io/tags/markdown/</loc>
     </url>
     <url>
-        <loc>https://rednithin.github.io/tags/web/page/1/</loc>
+        <loc>https://rednithin.github.io/tags/markdown/page/1/</loc>
     </url>
 </urlset>
