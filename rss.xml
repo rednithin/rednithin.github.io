@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Nithin Reddy</title>
+        <link>https://rednithin.github.io</link>
+        <description>Software Developer</description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="https://rednithin.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Thu, 04 Oct 2012 00:00:00 +0000</lastBuildDate>
+        <item>
+            <title>My Third Page</title>
+            <pubDate>Thu, 04 Oct 2012 00:00:00 +0000</pubDate>
+            <link>https://rednithin.github.io/blog/third/</link>
+            <guid>https://rednithin.github.io/blog/third/</guid>
+            <description>&lt;p&gt;Lorem markdownum. Dare multo sedem crescitque meliore amore laesi iam despecta,
+regalemque. Erat tempus aptos. Imaginis vestras. Mundus ubi suisque: est &lt;em&gt;neque&lt;&#x2F;em&gt;
+factas dis feres, texerat.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>My Second Page</title>
+            <pubDate>Wed, 03 Oct 2012 00:00:00 +0000</pubDate>
+            <link>https://rednithin.github.io/blog/second/</link>
+            <guid>https://rednithin.github.io/blog/second/</guid>
+            <description>&lt;p&gt;Lorem markdownum! Is elige ut &lt;strong&gt;vires depositoque Iolen&lt;&#x2F;strong&gt; admonuit fictilibus
+inmeriti operisque exaudi: corpore sanguine. Incerta terras honorque crescendo
+squamigeris in illis lentae &lt;strong&gt;limine&lt;&#x2F;strong&gt; hospes procul, amore?&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>My First Page</title>
+            <pubDate>Tue, 02 Oct 2012 00:00:00 +0000</pubDate>
+            <link>https://rednithin.github.io/blog/first/</link>
+            <guid>https://rednithin.github.io/blog/first/</guid>
+            <description>&lt;p&gt;This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article.&lt;&#x2F;p&gt;
+</description>
+        </item>
+    </channel>
+</rss>
