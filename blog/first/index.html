@@ -94,8 +94,8 @@
     </h1>
     <div class="mt-2">
       August 16, 2020 
-      - 3 min read
-      [<i>598 words</i>]
+      - 4 min read
+      [<i>659 words</i>]
     </div>
     <div class="mt-1 text-gray-600">
       
@@ -197,9 +197,33 @@ line 3 of code
 </span></code></pre>
 <p>Syntax highlighting</p>
 <pre style="background-color:#eff1f5;">
-<code><span style="color:#b48ead;">var </span><span style="color:#bf616a;">foo </span><span style="color:#4f5b66;">= </span><span style="color:#b48ead;">function </span><span style="color:#4f5b66;">(bar) { </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">bar</span><span style="color:#4f5b66;">++; };
+<code><span style="color:#b48ead;">pub struct </span><span style="color:#4f5b66;">Scanner&lt;R: io::BufRead&gt; {
+    </span><span style="color:#bf616a;">reader</span><span style="color:#4f5b66;">: R,
+    </span><span style="color:#bf616a;">buffer</span><span style="color:#4f5b66;">: Vec&lt;String&gt;,
+}
 
-console.</span><span style="color:#96b5b4;">log</span><span style="color:#4f5b66;">(</span><span style="color:#bf616a;">foo</span><span style="color:#4f5b66;">(</span><span style="color:#d08770;">5</span><span style="color:#4f5b66;">));
+</span><span style="color:#b48ead;">impl</span><span style="color:#4f5b66;">&lt;R: io::BufRead&gt; Scanner&lt;R&gt; {
+    </span><span style="color:#b48ead;">pub fn </span><span style="color:#8fa1b3;">new</span><span style="color:#4f5b66;">(</span><span style="color:#bf616a;">reader</span><span style="color:#4f5b66;">: R) -&gt; </span><span style="color:#b48ead;">Self </span><span style="color:#4f5b66;">{
+        Scanner {
+            reader,
+            buffer: Vec::new(),
+        }
+    }
+    </span><span style="color:#b48ead;">pub fn </span><span style="color:#8fa1b3;">next</span><span style="color:#4f5b66;">&lt;T: str::FromStr&gt;(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span style="color:#4f5b66;">) -&gt; T {
+        </span><span style="color:#b48ead;">loop </span><span style="color:#4f5b66;">{
+            </span><span style="color:#b48ead;">if let </span><span style="color:#4f5b66;">Some(token) = </span><span style="color:#bf616a;">self</span><span style="color:#4f5b66;">.buffer.</span><span style="color:#96b5b4;">pop</span><span style="color:#4f5b66;">() {
+                </span><span style="color:#b48ead;">return</span><span style="color:#4f5b66;"> token.</span><span style="color:#96b5b4;">parse</span><span style="color:#4f5b66;">().</span><span style="color:#96b5b4;">ok</span><span style="color:#4f5b66;">().</span><span style="color:#96b5b4;">expect</span><span style="color:#4f5b66;">(&quot;</span><span style="color:#a3be8c;">Token Parsing Failure</span><span style="color:#4f5b66;">&quot;);
+            }
+            </span><span style="color:#b48ead;">let mut</span><span style="color:#4f5b66;"> line = String::new();
+            </span><span style="color:#bf616a;">self</span><span style="color:#4f5b66;">.reader.</span><span style="color:#96b5b4;">read_line</span><span style="color:#4f5b66;">(&amp;</span><span style="color:#b48ead;">mut</span><span style="color:#4f5b66;"> line).</span><span style="color:#96b5b4;">expect</span><span style="color:#4f5b66;">(&quot;</span><span style="color:#a3be8c;">Line Read Failure</span><span style="color:#4f5b66;">&quot;);
+            </span><span style="color:#bf616a;">self</span><span style="color:#4f5b66;">.buffer = line
+                .</span><span style="color:#96b5b4;">split_ascii_whitespace</span><span style="color:#4f5b66;">()
+                .</span><span style="color:#96b5b4;">rev</span><span style="color:#4f5b66;">()
+                .</span><span style="color:#96b5b4;">map</span><span style="color:#4f5b66;">(String::from)
+                .</span><span style="color:#96b5b4;">collect</span><span style="color:#4f5b66;">();
+        }
+    }
+}
 </span></code></pre><h2 id="tables">Tables</h2>
 <table><thead><tr><th>Option</th><th>Description</th></tr></thead><tbody>
 <tr><td>data</td><td>path to data files to supply the data that will be passed into templates.</td></tr>
