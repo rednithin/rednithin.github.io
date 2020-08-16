@@ -1,9 +1,16 @@
-This is your taxonomy list page
+{% extends "base.html" %}
 
-<ul>
-  {% for term in terms %}
-      <li>
-          <a href="{{ term.slug | safe }}">{{ term.name }}</a>
-      </li>
-  {% endfor %}
-</ul>
+{% block content %}
+  <div class="text-center">
+    <div class="text-5xl font-bold  underline mb-8">
+      Tags
+    </div>
+    <ul class="text-2xl">
+      {% for term in terms %}
+          <li class="hover:underline mb-4">
+              <a href="{{ term.slug | safe }}"> #{{ term.name }}</a>
+          </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock content%}

@@ -1,1 +1,13 @@
-This is where I render my resume
+{% extends "base.html" %}
+
+{% block header %}
+{% endblock header%}
+
+{% block content %}
+  <div class="markdown-content">
+    {{ page.content | safe }}
+  </div>
+{% endblock content%}
+
+{% block footer %}
+{% endblock footer%}

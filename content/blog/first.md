@@ -7,8 +7,9 @@ date = 2012-10-02
 tags = ["rust", "web"]
 +++
 
-This is my first article.
----
+This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article. This is my first article.
+<!-- more -->
+
 __Advertisement :)__
 
 - __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
@@ -17,6 +18,7 @@ __Advertisement :)__
   i18n with plurals support and easy syntax.
 
 You will like those projects!
+
 
 ---
 

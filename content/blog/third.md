@@ -7,34 +7,42 @@ date = 2012-10-04
 tags = ["rust"]
 +++
 
-***
+Lorem markdownum. Dare multo sedem crescitque meliore amore laesi iam despecta,
+regalemque. Erat tempus aptos. Imaginis vestras. Mundus ubi suisque: est *neque*
+factas dis feres, texerat.
+<!-- more -->
 
-Here's a definition list:
+Nova telis: sim Ulixes vim lunae; sic illos suo, hunc orbam morata primum
+fluctus. Gauderet adulantes sonabunt super, crimen pater flebilis: omnis
+pallentemque non Quirini dixit, haec dici tangit: caecisque.
 
-apples
-  : Good for making applesauce.
-oranges
-  : Citrus!
-tomatoes
-  : There's no "e" in tomatoe.
+Verus sic et erit; pariturae prodigiis penetralia Hersilien monte positae vivat
+fatetur. Pulsoque [triumphos](http://spectans-desperat.net/) racemis *excita*.
 
-Again, text is indented 4 spaces. (Put a blank line between each
-term/definition pair to spread things out more.)
+## Quid templa videt
 
-Here's a "line block":
+Quod fuisset ultaque denique praestantior cetera sanguis venit capillos
+senioribus palato Stygii corpore abrumpit; facies
+[desit](http://www.et-aggere.com/et): sanguinis tergo. Cessant cunctis deducere,
+summas sororis, [olentia](http://aedes.com/effectum.html) pigetque quam dea:
+modo concita soror manet nato sis. **Circe** illo miseram cornua!
 
-| Line one
-|   Line too
-| Line tree
+    filename += wikiUpsHashtag(jpeg - volume_xp + lag, clickDown);
+    bank_lossless_error = e(panel_troubleshooting(trinitronTrinitronColumn,
+            pdfSpoofing), symbolic, hdvSidebarTwain + cardDial);
+    var firmware = tag;
 
-and images can be specified like so:
+Undae partem serpens; fractarum quoque dentes si, quae
+[arcuit](http://www.seque.io/ictuexactus.aspx) saepe Hyanteo in saxi iuvencae
+errabant. Sed Simois, et quodsi requiritur curvo, maternaque non iaculo pelago
+abdita? Neque mens relicta tractu funereus dextroque ostendit notas. Sola petis,
+tua tellure macies tunc usum nulloque Agre, vulnera nec lacertis.
 
-![example image](example-image.jpg "An exemplary image")
+- Namque decorum ora venere
+- Harpalos fuit
+- Fiducia et vellens sentit nec haec
+- Possis Phorbas qua
 
-Inline math equations go in like so: $\omega = d\phi / dt$. Display
-math should get its own line and be put in in double-dollarsigns:
-
-$$I = \int \rho R^{2} dV$$
-
-And note that you can backslash-escape any punctuation characters
-which you wish to be displayed literally, ex.: \`foo\`, \*bar\*, etc.
+Partique Narcissum ut misit. Fauces mihi exstinctum infecit; metuo grandior
+quanto guttura frequentes cavus! Corpus spatiosa et adesse arcuit Iove **ignotae
+obortae** regis Melaneus generis.
