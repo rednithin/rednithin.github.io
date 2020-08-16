@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://rednithin.github.io/sitemap.xml
