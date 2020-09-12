@@ -96,7 +96,7 @@
     <div class="mt-2">
       September 12, 2020 
       - 3 min read
-      [<i>546 words</i>]
+      [<i>557 words</i>]
     </div>
     <div class="mt-1 mb-4 text-gray-600 dark:text-teal-400">
       
@@ -129,6 +129,7 @@
 <ul>
 <li><a href="https://rednithin.github.io/blog/2-orangepi-config/#installation-2">Installation</a></li>
 <li><a href="https://rednithin.github.io/blog/2-orangepi-config/#joining">Joining</a></li>
+<li><a href="https://rednithin.github.io/blog/2-orangepi-config/#enabling-daemon">Enabling Daemon</a></li>
 </ul>
 </li>
 <li><a href="https://rednithin.github.io/blog/2-orangepi-config/#rossa">Rossa</a></li>
@@ -148,10 +149,10 @@ sudo</span><span style="color:#4f5b66;"> apt-get install hplip
 Or by using <code>dpkg</code> with <code>.deb</code> release in their Github releases page.</p>
 <h2 id="installation">Installation</h2>
 <pre style="background-color:#eff1f5;">
-<code><span style="color:#4f5b66;">sudo apt-get install zsh
+<code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> apt-get install zsh
 </span></code></pre><h2 id="change-shell-for-user">Change shell for user</h2>
 <pre style="background-color:#eff1f5;">
-<code><span style="color:#4f5b66;">chsh -s /bin/zsh
+<code><span style="color:#bf616a;">chsh -s</span><span style="color:#4f5b66;"> /bin/zsh
 </span></code></pre><h2 id="post-install">Post Install</h2>
 <ul>
 <li>Copy over your config file to <code>~/.zshrc</code>.</li>
@@ -203,13 +204,13 @@ We can then use this UUID in <code>/ets/fstab</code></p>
 </blockquote>
 <p>Then run the following command to restart the service</p>
 <pre style="background-color:#eff1f5;">
-<code><span style="color:#4f5b66;">sudo systemctl restart smbd.service
+<code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> systemctl restart smbd.service
 </span></code></pre><h1 id="starship">Starship</h1>
 <p>Before we proceed with the installation <a href="https://rustup.rs/">Rust</a> must be installed. </p>
 <h2 id="installation-1">Installation</h2>
 <pre style="background-color:#eff1f5;">
-<code><span style="color:#4f5b66;">sudo apt-get install pkg-config
-cargo install starship
+<code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> apt-get install pkg-config
+</span><span style="color:#bf616a;">cargo</span><span style="color:#4f5b66;"> install starship
 </span></code></pre>
 <blockquote>
 <p>Before installing ensure that max frequency of CPU is reduced and governer changed to <code>conservative</code> using <code>armbian-config</code> TUI to stop it from overheating.</p>
@@ -222,13 +223,15 @@ cargo install starship
 </span></code></pre><h2 id="joining">Joining</h2>
 <pre style="background-color:#eff1f5;">
 <code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> zerotier-cli join &lt;network-id-here&gt;
-sudo systemctl enable zerotier-one
-</span><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> systemctl start zerotier-one
 </span></code></pre>
 <blockquote>
 <p>Replace <code>&lt;network-id-here&gt;</code> with the actual network ID. </p>
 </blockquote>
-<h1 id="rossa">Rossa</h1>
+<h2 id="enabling-daemon">Enabling Daemon</h2>
+<pre style="background-color:#eff1f5;">
+<code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> systemctl enable zerotier-one
+</span><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> systemctl start zerotier-one
+</span></code></pre><h1 id="rossa">Rossa</h1>
 <pre style="background-color:#eff1f5;">
 <code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> snap install rossa</span><span style="color:#bf616a;"> --devmode --edge
 </span></code></pre>
