@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  <title>
+    Orange Pi 4B Armbian Configuration
+  </title>
+  <meta name="description" content="Orange Pi 4B Armbian Configuration" />
+
+
+  <link rel="canonical" href="https:&#x2F;&#x2F;rednithin.github.io" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1"
+  />
+  <meta name="robots" content="noodp" />
+  
+  <!-- Font CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;800&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet"> 
+  
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="https:&#x2F;&#x2F;rednithin.github.io&#x2F;styles&#x2F;styles.css" />
+
+  <!-- Icons -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="https:&#x2F;&#x2F;rednithin.github.io&#x2F;images&#x2F;favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="https:&#x2F;&#x2F;rednithin.github.io&#x2F;images&#x2F;favicon-16x16.png"
+  />
+  <link rel="shortcut icon" href="https:&#x2F;&#x2F;rednithin.github.io&#x2F;images&#x2F;favicon.png" />
+  
+  <link rel="manifest" href="https:&#x2F;&#x2F;rednithin.github.io&#x2F;images&#x2F;site.webmanifest" />
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+  <style>
+    #menu-toggle:checked + #menu {
+      display: block;
+    }
+  </style>
+</head>
+<body class="flex flex-col h-screen justify-between dark:bg-gray-800 dark:text-gray-300">
+  
+    <header class="bg-yellow-100 dark:bg-gray-900 md:text-lg shadow-md">
+      <div class="container mx-auto flex flex-wrap items-center justify-between">
+        <div class="font-bold inline-block text-xl md:text-2xl p-4 hover:text-teal-500">
+          <a href="/">\> red.nithin</a>
+        </div>
+        <label for="menu-toggle" class="cursor-pointer md:hidden m-4">
+          <i class="fas fa-angle-double-down"></i>
+        </label>
+        <input class="hidden" type="checkbox" name="menu-toggle" id="menu-toggle">
+        
+        <div 
+          class="hidden md:flex md:items-center md:w-auto w-full border-t md:border-t-0 pt-4 md:pt-0" 
+          id="menu"
+        >
+          <nav>
+            <ul class="md:flex items-center justify-between md:text-left">
+              <li class="block px-4 py-2 md:py-0 hover:font-semibold hover:text-teal-500"><a class="underline md:no-underline" href="/blog">Blog</a></li>
+              <li class="block px-4 py-2 md:py-0 hover:font-semibold hover:text-teal-500"><a class="underline md:no-underline" href="/contact">Contact</a></li>
+              <li class="block px-4 py-2 md:py-0 hover:font-semibold hover:text-teal-500"><a class="underline md:no-underline" href="/about">About</a></li>
+              <li class="block px-4 py-2 md:py-0 hover:font-semibold hover:text-teal-500"><a class="underline md:no-underline" href="/tags">Tags</a></li>
+              <li class="block px-4 py-2 md:py-0 hover:font-semibold hover:text-teal-500"><a class="underline md:no-underline" href="/resume">Resume</a></li>
+            </ul>
+          </nav>
+          <a href="" onclick="toggleTheme()">
+            <img 
+              class="m-4 rounded-full w-10 h-10 border-2 border-transparent hover:border-teal-500"
+              src="https:&#x2F;&#x2F;rednithin.github.io&#x2F;images&#x2F;android-chrome-192x192.png" 
+              alt="rednithin"
+            >
+          </a>
+        </div>
+      </div>
+    </header>
+  
+
+  <section class="container mx-auto mt-16 mb-24 px-4 md:px-16 lg:px-40 mb:auto md:text-lg">
+    
+  <article>
+    <h1 class="text-4xl font-bold">
+      <a href="https://rednithin.github.io/blog/2-orangepi-config/">Orange Pi 4B Armbian Configuration</a>
+    </h1>
+    <div class="mt-2">
+      September 12, 2020 
+      - 3 min read
+      [<i>546 words</i>]
+    </div>
+    <div class="mt-1 mb-4 text-gray-600 dark:text-teal-400">
+      
+        <a class="hover:text-gray-900 dark:hover:text-teal-500" href="/tags/orange pi">#orange pi</a>
+      
+        <a class="hover:text-gray-900 dark:hover:text-teal-500" href="/tags/armbian">#armbian</a>
+      
+    </div>
+    <div class="markdown-content">
+      <p>Just a list of things that I must do after a fresh install of Armbian on my OrangePi4B+.</p>
+<span id="continue-reading"></span>
+<ul>
+<li><a href="https://rednithin.github.io/blog/2-orangepi-config/#cups">Cups</a></li>
+<li><a href="https://rednithin.github.io/blog/2-orangepi-config/#zsh">Zsh</a>
+<ul>
+<li><a href="https://rednithin.github.io/blog/2-orangepi-config/#installation">Installation</a></li>
+<li><a href="https://rednithin.github.io/blog/2-orangepi-config/#change-shell-for-user">Change shell for user</a></li>
+<li><a href="https://rednithin.github.io/blog/2-orangepi-config/#post-install">Post Install</a></li>
+</ul>
+</li>
+<li><a href="https://rednithin.github.io/blog/2-orangepi-config/#fstab">Fstab</a></li>
+<li><a href="https://rednithin.github.io/blog/2-orangepi-config/#nfs-configuration">NFS Configuration</a></li>
+<li><a href="https://rednithin.github.io/blog/2-orangepi-config/#samba-configuration">Samba Configuration</a></li>
+<li><a href="https://rednithin.github.io/blog/2-orangepi-config/#starship">Starship</a>
+<ul>
+<li><a href="https://rednithin.github.io/blog/2-orangepi-config/#installation-1">Installation</a></li>
+</ul>
+</li>
+<li><a href="https://rednithin.github.io/blog/2-orangepi-config/#zerotier">Zerotier</a>
+<ul>
+<li><a href="https://rednithin.github.io/blog/2-orangepi-config/#installation-2">Installation</a></li>
+<li><a href="https://rednithin.github.io/blog/2-orangepi-config/#joining">Joining</a></li>
+</ul>
+</li>
+<li><a href="https://rednithin.github.io/blog/2-orangepi-config/#rossa">Rossa</a></li>
+</ul>
+<h1 id="cups">Cups</h1>
+<p>Cups is installed by default on Armbian, but we must enable <code>remote access</code> to admin and also enable the <code>sharing</code> of printers. In case of a HP printer it is advised to install <code>hplip</code> as well.</p>
+<pre style="background-color:#eff1f5;">
+<code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> cupsctl</span><span style="color:#bf616a;"> --remote-admin --remote-any --share-printers
+sudo</span><span style="color:#4f5b66;"> usermod</span><span style="color:#bf616a;"> -a -G</span><span style="color:#4f5b66;"> lpadmin $</span><span style="color:#bf616a;">USER
+sudo</span><span style="color:#4f5b66;"> apt-get install hplip
+</span></code></pre>
+<p>In your desktop/laptop you must enable the following service so the printers recognized by your OrangePi are discovered automatically.</p>
+<pre style="background-color:#eff1f5;">
+<code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> systemctl status cups-browsed.service
+</span></code></pre><h1 id="zsh">Zsh</h1>
+<p>Before we proceed with this <a href="https://getantibody.github.io/">antibody</a> must be installed either via the script.
+Or by using <code>dpkg</code> with <code>.deb</code> release in their Github releases page.</p>
+<h2 id="installation">Installation</h2>
+<pre style="background-color:#eff1f5;">
+<code><span style="color:#4f5b66;">sudo apt-get install zsh
+</span></code></pre><h2 id="change-shell-for-user">Change shell for user</h2>
+<pre style="background-color:#eff1f5;">
+<code><span style="color:#4f5b66;">chsh -s /bin/zsh
+</span></code></pre><h2 id="post-install">Post Install</h2>
+<ul>
+<li>Copy over your config file to <code>~/.zshrc</code>.</li>
+<li>Then we need to copy over the <code>~/.zsh_plugins.txt</code> file with the antobody plugins</li>
+</ul>
+<p>Once the above commands are run we execute the following</p>
+<pre style="background-color:#eff1f5;">
+<code><span style="color:#bf616a;">antibody</span><span style="color:#4f5b66;"> bundle &lt; .zsh_plugins.txt &gt; .zsh_plugins.sh
+</span></code></pre><h1 id="fstab">Fstab</h1>
+<p>We need to run <code>sudo blkid</code> to get the UUID of all the devices.
+We can then use this UUID in <code>/ets/fstab</code></p>
+<pre style="background-color:#eff1f5;">
+<code><span style="color:#4f5b66;">UUID</span><span style="color:#b48ead;">=</span><span style="color:#4f5b66;">xxxxxxxx</span><span style="color:#b48ead;">-</span><span style="color:#4f5b66;">xxxx</span><span style="color:#b48ead;">-</span><span style="color:#4f5b66;">xxxx</span><span style="color:#b48ead;">-</span><span style="color:#4f5b66;">xxxx</span><span style="color:#b48ead;">-</span><span style="color:#4f5b66;">xxxxxxxxxxxx       </span><span style="color:#b48ead;">/</span><span style="color:#4f5b66;">mnt</span><span style="color:#b48ead;">/</span><span style="color:#4f5b66;">Documents  ext4 defaults </span><span style="color:#d08770;">0 1
+</span></code></pre>
+<blockquote>
+<p>Replace <code>x's</code> with a valid UUID from <code>blkid</code> command.</p>
+</blockquote>
+<h1 id="nfs-configuration">NFS Configuration</h1>
+<p>We must first install the kernel server with the following command.</p>
+<pre style="background-color:#eff1f5;">
+<code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> apt-get install nfs-kernel-server
+</span></code></pre>
+<p>Then in <code>/etc/exports</code> we can give read/write access to the NFS drive depending on the IP like so</p>
+<pre style="background-color:#eff1f5;">
+<code><span style="color:#4f5b66;">/mnt/Documents &lt;write-ip&gt;(rw,all_squash,insecure,async,no_subtree_check,anonuid=0,anongid=0) *(ro,all_squash,insecure,async,no_subtree_check,anonuid=0,anongid=0)
+</span></code></pre>
+<blockquote>
+<p>Replace <code>&lt;write-ip&gt;</code> with a valid IP address.</p>
+</blockquote>
+<p>Then run the following to restart the daemon</p>
+<pre style="background-color:#eff1f5;">
+<code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> systemctl restart nfs-server.service
+</span></code></pre><h1 id="samba-configuration">Samba Configuration</h1>
+<p>Install samba via <code>armbian-config</code> TUI.</p>
+<p>After installation in <code>/etc/samba/smb.conf</code> add the following code to expose a directory.</p>
+<pre style="background-color:#eff1f5;">
+<code><span style="color:#b48ead;">[OPi4BFS]
+  </span><span style="color:#bf616a;">comment </span><span style="color:#4f5b66;">= Orange Pi FileSystem
+  </span><span style="color:#bf616a;">path </span><span style="color:#4f5b66;">= /mnt/Documents
+  </span><span style="color:#bf616a;">read </span><span style="color:#4f5b66;">only = </span><span style="color:#d08770;">yes
+  </span><span style="color:#bf616a;">guest </span><span style="color:#4f5b66;">ok = </span><span style="color:#d08770;">yes
+</span></code></pre>
+<p>And modify the hosts allow command in the same config file under <code>[global]</code></p>
+<pre style="background-color:#eff1f5;">
+<code><span style="color:#bf616a;">hosts </span><span style="color:#4f5b66;">allow = </span><span style="color:#d08770;">192</span><span style="color:#4f5b66;">.</span><span style="color:#d08770;">168</span><span style="color:#4f5b66;">.</span><span style="color:#d08770;">0</span><span style="color:#4f5b66;">. &lt;another-ip-</span><span style="color:#d08770;">1</span><span style="color:#4f5b66;">&gt; &lt;another-ip-</span><span style="color:#d08770;">2</span><span style="color:#4f5b66;">&gt; </span><span style="color:#d08770;">localhost
+</span></code></pre>
+<blockquote>
+<p>Replace <code>&lt;another-ip-i&gt;'s</code> with valid IP addresses.</p>
+</blockquote>
+<p>Then run the following command to restart the service</p>
+<pre style="background-color:#eff1f5;">
+<code><span style="color:#4f5b66;">sudo systemctl restart smbd.service
+</span></code></pre><h1 id="starship">Starship</h1>
+<p>Before we proceed with the installation <a href="https://rustup.rs/">Rust</a> must be installed. </p>
+<h2 id="installation-1">Installation</h2>
+<pre style="background-color:#eff1f5;">
+<code><span style="color:#4f5b66;">sudo apt-get install pkg-config
+cargo install starship
+</span></code></pre>
+<blockquote>
+<p>Before installing ensure that max frequency of CPU is reduced and governer changed to <code>conservative</code> using <code>armbian-config</code> TUI to stop it from overheating.</p>
+</blockquote>
+<p>After that edit your config in <code>~/.config/starship.toml</code></p>
+<h1 id="zerotier">Zerotier</h1>
+<h2 id="installation-2">Installation</h2>
+<pre style="background-color:#eff1f5;">
+<code><span style="color:#bf616a;">curl -s</span><span style="color:#4f5b66;"> https://install.zerotier.com | </span><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> bash
+</span></code></pre><h2 id="joining">Joining</h2>
+<pre style="background-color:#eff1f5;">
+<code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> zerotier-cli join &lt;network-id-here&gt;
+sudo systemctl enable zerotier-one
+</span><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> systemctl start zerotier-one
+</span></code></pre>
+<blockquote>
+<p>Replace <code>&lt;network-id-here&gt;</code> with the actual network ID. </p>
+</blockquote>
+<h1 id="rossa">Rossa</h1>
+<pre style="background-color:#eff1f5;">
+<code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> snap install rossa</span><span style="color:#bf616a;"> --devmode --edge
+</span></code></pre>
+<blockquote>
+<p>Rossa is a SimpleHTTPServer made by myself in Rust.</p>
+</blockquote>
+
+    </div>
+  </article>
+
+  <hr class="mt-24">
+
+  
+    <div class="text-center mt-24">
+      
+      
+        <a  href="https://rednithin.github.io/blog/1-markdown-cheatsheet/" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 px-4 rounded inline-flex items-center">
+          <span class="pr-2">Markdown Cheatsheet</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      
+    </div>
+  
+
+  </section>
+
+  
+    <footer class="bg-yellow-100 dark:bg-gray-900 md:text-lg border-t-2 border-yellow-400">
+      <div class="container mx-auto flex flex-wrap items-center justify-between py-6 px-4">
+        <div class="font-bold text-xl md:text-2xl hover:text-teal-500 hidden md:inline-block">
+          <a href="/">\> red.nithin</a>
+        </div>
+        <div class="text-xl">
+          <a class="mr-3" target="_blank" href="/rss.xml">
+            <i class="fas fa-rss hover:text-teal-500"></i>
+          </a>
+          <a class="mr-3" target="_blank" href="mailto:reddy.nithinpg@gmail.com">
+            <i class="fas fa-envelope hover:text-teal-500"></i>
+          </a>
+          <a class="mr-3" target="_blank" href="https://github.com/rednithin">
+            <i class="fab fa-github hover:text-teal-500"></i>
+          </a>
+          <a class="mr-3" target="_blank" href="https://www.linkedin.com/in/rednithin/">
+            <i class="fab fa-linkedin hover:text-teal-500"></i>
+          </a>
+        </div>
+        <p class="text-sm text-gray-500">
+          © 2020 Nithin Reddy
+        </p>
+      </div>
+    </footer>
+  
+
+  <script src="https:&#x2F;&#x2F;rednithin.github.io&#x2F;js&#x2F;theme.js"></script>
+
+  <script src="https://unpkg.com/quicklink@2.0.0/dist/quicklink.umd.js"></script>
+  <script>
+    window.addEventListener('load', () =>{
+      quicklink.listen();
+    });
+  </script>
+
+</body>
+</html>

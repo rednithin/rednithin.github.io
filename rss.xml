@@ -7,7 +7,15 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="https://rednithin.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Sun, 16 Aug 2020 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 12 Sep 2020 00:00:00 +0000</lastBuildDate>
+        <item>
+            <title>Orange Pi 4B Armbian Configuration</title>
+            <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
+            <link>https://rednithin.github.io/blog/2-orangepi-config/</link>
+            <guid>https://rednithin.github.io/blog/2-orangepi-config/</guid>
+            <description>&lt;p&gt;Just a list of things that I must do after a fresh install of Armbian on my OrangePi4B+.&lt;&#x2F;p&gt;
+</description>
+        </item>
         <item>
             <title>Markdown Cheatsheet</title>
             <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>

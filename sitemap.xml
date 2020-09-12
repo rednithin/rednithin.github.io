@@ -14,6 +14,10 @@
         <lastmod>2020-08-16</lastmod>
     </url>
     <url>
+        <loc>https://rednithin.github.io/blog/2-orangepi-config/</loc>
+        <lastmod>2020-09-12</lastmod>
+    </url>
+    <url>
         <loc>https://rednithin.github.io/blog/page/1/</loc>
     </url>
     <url>
@@ -26,6 +30,12 @@
         <loc>https://rednithin.github.io/tags/</loc>
     </url>
     <url>
+        <loc>https://rednithin.github.io/tags/armbian/</loc>
+    </url>
+    <url>
+        <loc>https://rednithin.github.io/tags/armbian/page/1/</loc>
+    </url>
+    <url>
         <loc>https://rednithin.github.io/tags/cheatsheet/</loc>
     </url>
     <url>
@@ -36,5 +46,11 @@
     </url>
     <url>
         <loc>https://rednithin.github.io/tags/markdown/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://rednithin.github.io/tags/orange-pi/</loc>
+    </url>
+    <url>
+        <loc>https://rednithin.github.io/tags/orange-pi/page/1/</loc>
     </url>
 </urlset>
