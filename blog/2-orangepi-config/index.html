@@ -13,13 +13,9 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=yes"
   />
   <meta name="robots" content="noodp" />
-  
-  <!-- Font CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;800&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet"> 
   
   <!-- Theme CSS -->
   <link rel="stylesheet" href="https:&#x2F;&#x2F;rednithin.github.io&#x2F;styles&#x2F;styles.css" />
@@ -40,8 +36,6 @@
   <link rel="shortcut icon" href="https:&#x2F;&#x2F;rednithin.github.io&#x2F;images&#x2F;favicon.png" />
   
   <link rel="manifest" href="https:&#x2F;&#x2F;rednithin.github.io&#x2F;images&#x2F;site.webmanifest" />
-
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
   <style>
     #menu-toggle:checked + #menu {
@@ -136,22 +130,22 @@
 <h1 id="cups">Cups</h1>
 <p>Cups is installed by default on Armbian, but we must enable <code>remote access</code> to admin and also enable the <code>sharing</code> of printers. In case of a HP printer it is advised to install <code>hplip</code> as well.</p>
 <pre style="background-color:#eff1f5;">
-<code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> cupsctl</span><span style="color:#bf616a;"> --remote-admin --remote-any --share-printers
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> cupsctl</span><span style="color:#bf616a;"> --remote-admin --remote-any --share-printers
 sudo</span><span style="color:#4f5b66;"> usermod</span><span style="color:#bf616a;"> -a -G</span><span style="color:#4f5b66;"> lpadmin $</span><span style="color:#bf616a;">USER
 sudo</span><span style="color:#4f5b66;"> apt-get install hplip
 </span></code></pre>
 <p>In your desktop/laptop you must enable the following service so the printers recognized by your OrangePi are discovered automatically.</p>
 <pre style="background-color:#eff1f5;">
-<code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> systemctl status cups-browsed.service
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> systemctl status cups-browsed.service
 </span></code></pre><h1 id="zsh">Zsh</h1>
 <p>Before we proceed with this <a href="https://getantibody.github.io/">antibody</a> must be installed either via the script.
 Or by using <code>dpkg</code> with <code>.deb</code> release in their Github releases page.</p>
 <h2 id="installation">Installation</h2>
 <pre style="background-color:#eff1f5;">
-<code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> apt-get install zsh
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> apt-get install zsh
 </span></code></pre><h2 id="change-shell-for-user">Change shell for user</h2>
 <pre style="background-color:#eff1f5;">
-<code><span style="color:#bf616a;">chsh -s</span><span style="color:#4f5b66;"> /bin/zsh
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">chsh -s</span><span style="color:#4f5b66;"> /bin/zsh
 </span></code></pre><h2 id="post-install">Post Install</h2>
 <ul>
 <li>Copy over your config file to <code>~/.zshrc</code>.</li>
@@ -159,12 +153,12 @@ Or by using <code>dpkg</code> with <code>.deb</code> release in their Github rel
 </ul>
 <p>Once the above commands are run we execute the following</p>
 <pre style="background-color:#eff1f5;">
-<code><span style="color:#bf616a;">antibody</span><span style="color:#4f5b66;"> bundle &lt; .zsh_plugins.txt &gt; .zsh_plugins.sh
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">antibody</span><span style="color:#4f5b66;"> bundle &lt; .zsh_plugins.txt &gt; .zsh_plugins.sh
 </span></code></pre><h1 id="fstab">Fstab</h1>
 <p>We need to run <code>sudo blkid</code> to get the UUID of all the devices.
 We can then use this UUID in <code>/ets/fstab</code></p>
 <pre style="background-color:#eff1f5;">
-<code><span style="color:#4f5b66;">UUID</span><span style="color:#b48ead;">=</span><span style="color:#4f5b66;">xxxxxxxx</span><span style="color:#b48ead;">-</span><span style="color:#4f5b66;">xxxx</span><span style="color:#b48ead;">-</span><span style="color:#4f5b66;">xxxx</span><span style="color:#b48ead;">-</span><span style="color:#4f5b66;">xxxx</span><span style="color:#b48ead;">-</span><span style="color:#4f5b66;">xxxxxxxxxxxx       </span><span style="color:#b48ead;">/</span><span style="color:#4f5b66;">mnt</span><span style="color:#b48ead;">/</span><span style="color:#4f5b66;">Documents  ext4 defaults </span><span style="color:#d08770;">0 1
+<code class="language-fs" data-lang="fs"><span style="color:#4f5b66;">UUID</span><span style="color:#b48ead;">=</span><span style="color:#4f5b66;">xxxxxxxx</span><span style="color:#b48ead;">-</span><span style="color:#4f5b66;">xxxx</span><span style="color:#b48ead;">-</span><span style="color:#4f5b66;">xxxx</span><span style="color:#b48ead;">-</span><span style="color:#4f5b66;">xxxx</span><span style="color:#b48ead;">-</span><span style="color:#4f5b66;">xxxxxxxxxxxx       </span><span style="color:#b48ead;">/</span><span style="color:#4f5b66;">mnt</span><span style="color:#b48ead;">/</span><span style="color:#4f5b66;">Documents  ext4 defaults </span><span style="color:#d08770;">0 1
 </span></code></pre>
 <blockquote>
 <p>Replace <code>x's</code> with a valid UUID from <code>blkid</code> command.</p>
@@ -172,7 +166,7 @@ We can then use this UUID in <code>/ets/fstab</code></p>
 <h1 id="nfs-configuration">NFS Configuration</h1>
 <p>We must first install the kernel server with the following command.</p>
 <pre style="background-color:#eff1f5;">
-<code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> apt-get install nfs-kernel-server
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> apt-get install nfs-kernel-server
 </span></code></pre>
 <p>Then in <code>/etc/exports</code> we can give read/write access to the NFS drive depending on the IP like so</p>
 <pre style="background-color:#eff1f5;">
@@ -183,12 +177,12 @@ We can then use this UUID in <code>/ets/fstab</code></p>
 </blockquote>
 <p>Then run the following to restart the daemon</p>
 <pre style="background-color:#eff1f5;">
-<code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> systemctl restart nfs-server.service
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> systemctl restart nfs-server.service
 </span></code></pre><h1 id="samba-configuration">Samba Configuration</h1>
 <p>Install samba via <code>armbian-config</code> TUI.</p>
 <p>After installation in <code>/etc/samba/smb.conf</code> add the following code to expose a directory.</p>
 <pre style="background-color:#eff1f5;">
-<code><span style="color:#b48ead;">[OPi4BFS]
+<code class="language-conf" data-lang="conf"><span style="color:#b48ead;">[OPi4BFS]
   </span><span style="color:#bf616a;">comment </span><span style="color:#4f5b66;">= Orange Pi FileSystem
   </span><span style="color:#bf616a;">path </span><span style="color:#4f5b66;">= /mnt/Documents
   </span><span style="color:#bf616a;">read </span><span style="color:#4f5b66;">only = </span><span style="color:#d08770;">yes
@@ -196,19 +190,19 @@ We can then use this UUID in <code>/ets/fstab</code></p>
 </span></code></pre>
 <p>And modify the hosts allow command in the same config file under <code>[global]</code></p>
 <pre style="background-color:#eff1f5;">
-<code><span style="color:#bf616a;">hosts </span><span style="color:#4f5b66;">allow = </span><span style="color:#d08770;">192</span><span style="color:#4f5b66;">.</span><span style="color:#d08770;">168</span><span style="color:#4f5b66;">.</span><span style="color:#d08770;">0</span><span style="color:#4f5b66;">. &lt;another-ip-</span><span style="color:#d08770;">1</span><span style="color:#4f5b66;">&gt; &lt;another-ip-</span><span style="color:#d08770;">2</span><span style="color:#4f5b66;">&gt; </span><span style="color:#d08770;">localhost
+<code class="language-conf" data-lang="conf"><span style="color:#bf616a;">hosts </span><span style="color:#4f5b66;">allow = </span><span style="color:#d08770;">192</span><span style="color:#4f5b66;">.</span><span style="color:#d08770;">168</span><span style="color:#4f5b66;">.</span><span style="color:#d08770;">0</span><span style="color:#4f5b66;">. &lt;another-ip-</span><span style="color:#d08770;">1</span><span style="color:#4f5b66;">&gt; &lt;another-ip-</span><span style="color:#d08770;">2</span><span style="color:#4f5b66;">&gt; </span><span style="color:#d08770;">localhost
 </span></code></pre>
 <blockquote>
 <p>Replace <code>&lt;another-ip-i&gt;'s</code> with valid IP addresses.</p>
 </blockquote>
 <p>Then run the following command to restart the service</p>
 <pre style="background-color:#eff1f5;">
-<code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> systemctl restart smbd.service
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> systemctl restart smbd.service
 </span></code></pre><h1 id="starship">Starship</h1>
 <p>Before we proceed with the installation <a href="https://rustup.rs/">Rust</a> must be installed. </p>
 <h2 id="installation-1">Installation</h2>
 <pre style="background-color:#eff1f5;">
-<code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> apt-get install pkg-config
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> apt-get install pkg-config
 </span><span style="color:#bf616a;">cargo</span><span style="color:#4f5b66;"> install starship
 </span></code></pre>
 <blockquote>
@@ -218,21 +212,21 @@ We can then use this UUID in <code>/ets/fstab</code></p>
 <h1 id="zerotier">Zerotier</h1>
 <h2 id="installation-2">Installation</h2>
 <pre style="background-color:#eff1f5;">
-<code><span style="color:#bf616a;">curl -s</span><span style="color:#4f5b66;"> https://install.zerotier.com | </span><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> bash
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">curl -s</span><span style="color:#4f5b66;"> https://install.zerotier.com | </span><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> bash
 </span></code></pre><h2 id="joining">Joining</h2>
 <pre style="background-color:#eff1f5;">
-<code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> zerotier-cli join &lt;network-id-here&gt;
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> zerotier-cli join &lt;network-id-here&gt;
 </span></code></pre>
 <blockquote>
 <p>Replace <code>&lt;network-id-here&gt;</code> with the actual network ID. </p>
 </blockquote>
 <h2 id="enabling-daemon">Enabling Daemon</h2>
 <pre style="background-color:#eff1f5;">
-<code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> systemctl enable zerotier-one
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> systemctl enable zerotier-one
 </span><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> systemctl start zerotier-one
 </span></code></pre><h1 id="rossa">Rossa</h1>
 <pre style="background-color:#eff1f5;">
-<code><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> snap install rossa</span><span style="color:#bf616a;"> --devmode --edge
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> snap install rossa</span><span style="color:#bf616a;"> --devmode --edge
 </span></code></pre>
 <blockquote>
 <p>Rossa is a SimpleHTTPServer made by myself in Rust.</p>
@@ -264,16 +258,16 @@ We can then use this UUID in <code>/ets/fstab</code></p>
           <a href="/">\> red.nithin</a>
         </div>
         <div class="text-xl">
-          <a class="mr-3" target="_blank" href="/rss.xml">
+          <a class="mr-3" target="_blank" href="/rss.xml" aria-label="RSS Feed">
             <i class="fas fa-rss hover:text-teal-500"></i>
           </a>
-          <a class="mr-3" target="_blank" href="mailto:reddy.nithinpg@gmail.com">
+          <a class="mr-3" target="_blank" href="mailto:reddy.nithinpg@gmail.com" aria-label="Mail To">
             <i class="fas fa-envelope hover:text-teal-500"></i>
           </a>
-          <a class="mr-3" target="_blank" href="https://github.com/rednithin">
+          <a class="mr-3" target="_blank" rel="noopener noreferrer" href="https://github.com/rednithin" aria-label="Github">
             <i class="fab fa-github hover:text-teal-500"></i>
           </a>
-          <a class="mr-3" target="_blank" href="https://www.linkedin.com/in/rednithin/">
+          <a class="mr-3" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/rednithin/" aria-label="Linkedin">
             <i class="fab fa-linkedin hover:text-teal-500"></i>
           </a>
         </div>
@@ -283,6 +277,11 @@ We can then use this UUID in <code>/ets/fstab</code></p>
       </div>
     </footer>
   
+
+  <!-- Font CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;800&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
   <script src="https:&#x2F;&#x2F;rednithin.github.io&#x2F;js&#x2F;theme.js"></script>
 
