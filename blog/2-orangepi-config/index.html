@@ -9,7 +9,9 @@
   <meta name="description" content="Orange Pi 4B Armbian Configuration" />
 
 
-  <link rel="canonical" href="https:&#x2F;&#x2F;rednithin.github.io" />
+   
+    <link rel="canonical" href="https:&#x2F;&#x2F;rednithin.github.io&#x2F;blog&#x2F;2-orangepi-config&#x2F;" />
+   
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta
     name="viewport"
@@ -132,81 +134,81 @@
 </ul>
 <h1 id="cups">Cups</h1>
 <p>Cups is installed by default on Armbian, but we must enable <code>remote access</code> to admin and also enable the <code>sharing</code> of printers. In case of a HP printer it is advised to install <code>hplip</code> as well.</p>
-<pre style="background-color:#eff1f5;">
-<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> cupsctl</span><span style="color:#bf616a;"> --remote-admin --remote-any --share-printers
-sudo</span><span style="color:#4f5b66;"> usermod</span><span style="color:#bf616a;"> -a -G</span><span style="color:#4f5b66;"> lpadmin $</span><span style="color:#bf616a;">USER
-sudo</span><span style="color:#4f5b66;"> apt-get install hplip
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#c0c5ce;"> cupsctl</span><span style="color:#bf616a;"> --remote-admin --remote-any --share-printers
+sudo</span><span style="color:#c0c5ce;"> usermod</span><span style="color:#bf616a;"> -a -G</span><span style="color:#c0c5ce;"> lpadmin $</span><span style="color:#bf616a;">USER
+sudo</span><span style="color:#c0c5ce;"> apt-get install hplip
 </span></code></pre>
 <p>In your desktop/laptop you must enable the following service so the printers recognized by your OrangePi are discovered automatically.</p>
-<pre style="background-color:#eff1f5;">
-<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> systemctl status cups-browsed.service
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#c0c5ce;"> systemctl status cups-browsed.service
 </span></code></pre><h1 id="zsh">Zsh</h1>
 <p>Before we proceed with this <a href="https://getantibody.github.io/">antibody</a> must be installed either via the script.
 Or by using <code>dpkg</code> with <code>.deb</code> release in their Github releases page.</p>
 <h2 id="installation">Installation</h2>
-<pre style="background-color:#eff1f5;">
-<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> apt-get install zsh
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#c0c5ce;"> apt-get install zsh
 </span></code></pre><h2 id="change-shell-for-user">Change shell for user</h2>
-<pre style="background-color:#eff1f5;">
-<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">chsh -s</span><span style="color:#4f5b66;"> /bin/zsh
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">chsh -s</span><span style="color:#c0c5ce;"> /bin/zsh
 </span></code></pre><h2 id="post-install">Post Install</h2>
 <ul>
 <li>Copy over your config file to <code>~/.zshrc</code>.</li>
 <li>Then we need to copy over the <code>~/.zsh_plugins.txt</code> file with the antobody plugins</li>
 </ul>
 <p>Once the above commands are run we execute the following</p>
-<pre style="background-color:#eff1f5;">
-<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">antibody</span><span style="color:#4f5b66;"> bundle &lt; .zsh_plugins.txt &gt; .zsh_plugins.sh
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">antibody</span><span style="color:#c0c5ce;"> bundle &lt; .zsh_plugins.txt &gt; .zsh_plugins.sh
 </span></code></pre><h1 id="fstab">Fstab</h1>
 <p>We need to run <code>sudo blkid</code> to get the UUID of all the devices.
 We can then use this UUID in <code>/ets/fstab</code></p>
-<pre style="background-color:#eff1f5;">
-<code class="language-fs" data-lang="fs"><span style="color:#4f5b66;">UUID</span><span style="color:#b48ead;">=</span><span style="color:#4f5b66;">xxxxxxxx</span><span style="color:#b48ead;">-</span><span style="color:#4f5b66;">xxxx</span><span style="color:#b48ead;">-</span><span style="color:#4f5b66;">xxxx</span><span style="color:#b48ead;">-</span><span style="color:#4f5b66;">xxxx</span><span style="color:#b48ead;">-</span><span style="color:#4f5b66;">xxxxxxxxxxxx       </span><span style="color:#b48ead;">/</span><span style="color:#4f5b66;">mnt</span><span style="color:#b48ead;">/</span><span style="color:#4f5b66;">Documents  ext4 defaults </span><span style="color:#d08770;">0 1
+<pre style="background-color:#2b303b;">
+<code class="language-fs" data-lang="fs"><span style="color:#c0c5ce;">UUID</span><span style="color:#b48ead;">=</span><span style="color:#c0c5ce;">xxxxxxxx</span><span style="color:#b48ead;">-</span><span style="color:#c0c5ce;">xxxx</span><span style="color:#b48ead;">-</span><span style="color:#c0c5ce;">xxxx</span><span style="color:#b48ead;">-</span><span style="color:#c0c5ce;">xxxx</span><span style="color:#b48ead;">-</span><span style="color:#c0c5ce;">xxxxxxxxxxxx       </span><span style="color:#b48ead;">/</span><span style="color:#c0c5ce;">mnt</span><span style="color:#b48ead;">/</span><span style="color:#c0c5ce;">Documents  ext4 defaults </span><span style="color:#d08770;">0 1
 </span></code></pre>
 <blockquote>
 <p>Replace <code>x's</code> with a valid UUID from <code>blkid</code> command.</p>
 </blockquote>
 <h1 id="nfs-configuration">NFS Configuration</h1>
 <p>We must first install the kernel server with the following command.</p>
-<pre style="background-color:#eff1f5;">
-<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> apt-get install nfs-kernel-server
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#c0c5ce;"> apt-get install nfs-kernel-server
 </span></code></pre>
 <p>Then in <code>/etc/exports</code> we can give read/write access to the NFS drive depending on the IP like so</p>
-<pre style="background-color:#eff1f5;">
-<code><span style="color:#4f5b66;">/mnt/Documents &lt;write-ip&gt;(rw,all_squash,insecure,async,no_subtree_check,anonuid=0,anongid=0) *(ro,all_squash,insecure,async,no_subtree_check,anonuid=0,anongid=0)
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">/mnt/Documents &lt;write-ip&gt;(rw,all_squash,insecure,async,no_subtree_check,anonuid=0,anongid=0) *(ro,all_squash,insecure,async,no_subtree_check,anonuid=0,anongid=0)
 </span></code></pre>
 <blockquote>
 <p>Replace <code>&lt;write-ip&gt;</code> with a valid IP address.</p>
 </blockquote>
 <p>Then run the following to restart the daemon</p>
-<pre style="background-color:#eff1f5;">
-<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> systemctl restart nfs-server.service
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#c0c5ce;"> systemctl restart nfs-server.service
 </span></code></pre><h1 id="samba-configuration">Samba Configuration</h1>
 <p>Install samba via <code>armbian-config</code> TUI.</p>
 <p>After installation in <code>/etc/samba/smb.conf</code> add the following code to expose a directory.</p>
-<pre style="background-color:#eff1f5;">
+<pre style="background-color:#2b303b;">
 <code class="language-conf" data-lang="conf"><span style="color:#b48ead;">[OPi4BFS]
-  </span><span style="color:#bf616a;">comment </span><span style="color:#4f5b66;">= Orange Pi FileSystem
-  </span><span style="color:#bf616a;">path </span><span style="color:#4f5b66;">= /mnt/Documents
-  </span><span style="color:#bf616a;">read </span><span style="color:#4f5b66;">only = </span><span style="color:#d08770;">yes
-  </span><span style="color:#bf616a;">guest </span><span style="color:#4f5b66;">ok = </span><span style="color:#d08770;">yes
+  </span><span style="color:#bf616a;">comment </span><span style="color:#c0c5ce;">= Orange Pi FileSystem
+  </span><span style="color:#bf616a;">path </span><span style="color:#c0c5ce;">= /mnt/Documents
+  </span><span style="color:#bf616a;">read </span><span style="color:#c0c5ce;">only = </span><span style="color:#d08770;">yes
+  </span><span style="color:#bf616a;">guest </span><span style="color:#c0c5ce;">ok = </span><span style="color:#d08770;">yes
 </span></code></pre>
 <p>And modify the hosts allow command in the same config file under <code>[global]</code></p>
-<pre style="background-color:#eff1f5;">
-<code class="language-conf" data-lang="conf"><span style="color:#bf616a;">hosts </span><span style="color:#4f5b66;">allow = </span><span style="color:#d08770;">192</span><span style="color:#4f5b66;">.</span><span style="color:#d08770;">168</span><span style="color:#4f5b66;">.</span><span style="color:#d08770;">0</span><span style="color:#4f5b66;">. &lt;another-ip-</span><span style="color:#d08770;">1</span><span style="color:#4f5b66;">&gt; &lt;another-ip-</span><span style="color:#d08770;">2</span><span style="color:#4f5b66;">&gt; </span><span style="color:#d08770;">localhost
+<pre style="background-color:#2b303b;">
+<code class="language-conf" data-lang="conf"><span style="color:#bf616a;">hosts </span><span style="color:#c0c5ce;">allow = </span><span style="color:#d08770;">192</span><span style="color:#c0c5ce;">.</span><span style="color:#d08770;">168</span><span style="color:#c0c5ce;">.</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">. &lt;another-ip-</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">&gt; &lt;another-ip-</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">&gt; </span><span style="color:#d08770;">localhost
 </span></code></pre>
 <blockquote>
 <p>Replace <code>&lt;another-ip-i&gt;'s</code> with valid IP addresses.</p>
 </blockquote>
 <p>Then run the following command to restart the service</p>
-<pre style="background-color:#eff1f5;">
-<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> systemctl restart smbd.service
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#c0c5ce;"> systemctl restart smbd.service
 </span></code></pre><h1 id="starship">Starship</h1>
 <p>Before we proceed with the installation <a href="https://rustup.rs/">Rust</a> must be installed. </p>
 <h2 id="installation-1">Installation</h2>
-<pre style="background-color:#eff1f5;">
-<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> apt-get install pkg-config
-</span><span style="color:#bf616a;">cargo</span><span style="color:#4f5b66;"> install starship
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#c0c5ce;"> apt-get install pkg-config
+</span><span style="color:#bf616a;">cargo</span><span style="color:#c0c5ce;"> install starship
 </span></code></pre>
 <blockquote>
 <p>Before installing ensure that max frequency of CPU is reduced and governer changed to <code>conservative</code> using <code>armbian-config</code> TUI to stop it from overheating.</p>
@@ -214,22 +216,22 @@ We can then use this UUID in <code>/ets/fstab</code></p>
 <p>After that edit your config in <code>~/.config/starship.toml</code></p>
 <h1 id="zerotier">Zerotier</h1>
 <h2 id="installation-2">Installation</h2>
-<pre style="background-color:#eff1f5;">
-<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">curl -s</span><span style="color:#4f5b66;"> https://install.zerotier.com | </span><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> bash
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">curl -s</span><span style="color:#c0c5ce;"> https://install.zerotier.com | </span><span style="color:#bf616a;">sudo</span><span style="color:#c0c5ce;"> bash
 </span></code></pre><h2 id="joining">Joining</h2>
-<pre style="background-color:#eff1f5;">
-<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> zerotier-cli join &lt;network-id-here&gt;
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#c0c5ce;"> zerotier-cli join &lt;network-id-here&gt;
 </span></code></pre>
 <blockquote>
 <p>Replace <code>&lt;network-id-here&gt;</code> with the actual network ID. </p>
 </blockquote>
 <h2 id="enabling-daemon">Enabling Daemon</h2>
-<pre style="background-color:#eff1f5;">
-<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> systemctl enable zerotier-one
-</span><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> systemctl start zerotier-one
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#c0c5ce;"> systemctl enable zerotier-one
+</span><span style="color:#bf616a;">sudo</span><span style="color:#c0c5ce;"> systemctl start zerotier-one
 </span></code></pre><h1 id="rossa">Rossa</h1>
-<pre style="background-color:#eff1f5;">
-<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#4f5b66;"> snap install rossa</span><span style="color:#bf616a;"> --devmode --edge
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#c0c5ce;"> snap install rossa</span><span style="color:#bf616a;"> --devmode --edge
 </span></code></pre>
 <blockquote>
 <p>Rossa is a SimpleHTTPServer made by myself in Rust.</p>
