@@ -94,7 +94,7 @@
     <div class="mt-2">
       March 07, 2021 
       - 5 min read
-      [<i>934 words</i>]
+      [<i>927 words</i>]
     </div>
     <div class="mt-1 mb-4 text-gray-600 dark:text-teal-400">
       
@@ -117,7 +117,7 @@
 <li><a href="https://rednithin.github.io/blog/3-easiest-way-to-make-a-static-website-into-a-pwa/#conclusion">Conclusion</a></li>
 </ul>
 <h1 id="what-is-a-pwa">What is a PWA?</h1>
-<p>To put it in simple terms it's a web app which behaves as a native app on a respective platform like Linux, Android etc.
+<p>To put it in simple terms it's a web app that behaves like a native app on a respective platform like Linux, Android, etc.
 PWA generally consists of 2 main things.</p>
 <ul>
 <li>Service Worker</li>
@@ -133,9 +133,9 @@ It will be a ton of work.</p>
 <li>Clearing old caches </li>
 </ul>
 <p>...and the list goes on.</p>
-<p>Instead of rolling out our own custom logic which frankly takes a lot of time to get right.
+<p>Instead of rolling out our custom logic which frankly takes a lot of time to get right.
 We can go with <a href="https://developers.google.com/web/tools/workbox">workbox</a>.
-Workbox is a library which does all of the above and all we need to do is declaratively specify what we want.</p>
+Workbox is a library that does all of the above and all we need to do is declaratively specify what we want.</p>
 <pre style="background-color:#282a36;">
 <code class="language-javascript" data-lang="javascript"><span style="font-style:italic;color:#8be9fd;">const </span><span style="color:#ffffff;">workboxBuild </span><span style="color:#ff79c6;">= </span><span style="color:#8be9fd;">require</span><span style="color:#f8f8f2;">(</span><span style="color:#f1fa8c;">&#39;workbox-build&#39;</span><span style="color:#f8f8f2;">);
 
@@ -190,11 +190,11 @@ Workbox is a library which does all of the above and all we need to do is declar
 </span><span style="color:#50fa7b;">buildSW</span><span style="color:#f8f8f2;">();
 </span></code></pre>
 <p>The above code generates a service worker file with <code>pre-caching</code> and <code>runtime caching</code></p>
-<p>Pre-caching is basically downloading all the files ahead of time so all of them are served from the cache whenever we request for a specific page or asset. Pre-caching is usually done right after your website loads. This is how we can make our app truly offline because we will downloading the entire website on the initial load. (Point to note that pre-caching happens after your initial page load is done. So it doesn't affect your website initial load times/render times). <code>globPatterns</code> determines what files will be pre-cached.</p>
-<p>Runtime caching is basically caching on the fly. In the above example you can see that I am caching all the images/fonts using runtime caching. That is as soon as a request for a image/font happens it will also be cached at that point, so from next time onwards it will be fetched from the cache. </p>
-<p>Also a thing to keep in mind are the various strategies workbox provides.</p>
-<p>For images I have used <code>StaleWhileRevalidate</code> strategy which basically serves the image from cache then checks/updates the image to be up-to-date.</p>
-<p>As for the fonts I have used <code>CacheFirst</code> strategy which basically serves it from cache if it exists otherwise it fetches it from the network. CacheFirst strategy makes sense for fonts they don't change.</p>
+<p>Pre-caching is downloading all the files ahead of time so all of them are served from the cache whenever we request a specific page or asset. Pre-caching is usually done right after your website loads. This is how we can make our app truly offline because we will download the entire website on the initial load. (Point to note that pre-caching happens after your initial page load is done. So it doesn't affect your website initial load times/render times). <code>globPatterns</code> determines what files will be pre-cached.</p>
+<p>Runtime caching is caching on the fly. In the above example, you can see that I am caching all the images/fonts using runtime caching. That is as soon as a request for an image/font happens it will also be cached at that point, so from next time onwards it will be fetched from the cache. </p>
+<p>Also, a thing to keep in mind is the various strategies workbox provides.</p>
+<p>For images I have used <code>StaleWhileRevalidate</code> strategy which serves the image from cache then checks/updates the image to be up-to-date.</p>
+<p>As for the fonts I have used <code>CacheFirst</code> strategy which serves it from the cache if it exists otherwise it fetches it from the network. CacheFirst strategy makes sense for fonts they don't change.</p>
 <h1 id="sample-manifest-file">Sample Manifest file</h1>
 <pre style="background-color:#282a36;">
 <code class="language-json" data-lang="json"><span style="color:#f8f8f2;">{
@@ -225,10 +225,10 @@ Workbox is a library which does all of the above and all we need to do is declar
 </span><span style="color:#f8f8f2;">}
 </span></code></pre>
 <p>So the main thing you will notice is that you will need icons.
-For my blog the icons are generated from <a href="https://favicon.io/">favicon.io</a>.</p>
-<p>This website will give your logo in multiple formats and sized which you can use directly.</p>
+For my blog, the icons are generated from <a href="https://favicon.io/">favicon.io</a>.</p>
+<p>This website will give your logo in multiple formats and sizes which you can use directly.</p>
 <p>If you notice along with the icons we also need something known as a <code>maskable icon</code>.
-It's an icon which can be dynamically modified to ovals, square, rounded squares etc by an icon pack on Android to make it feel familiar with the theme.</p>
+It's an icon that can be dynamically modified to ovals, square, rounded squares, etc by an icon pack on Android to make it feel familiar with the theme.</p>
 <p>You can easily convert any icon into a maskable icon from here <a href="https://maskable.app/">maskable.app</a></p>
 <h1 id="some-meta-and-link-tags">Some Meta And Link Tags</h1>
 <pre style="background-color:#282a36;">
@@ -273,17 +273,17 @@ It's an icon which can be dynamically modified to ovals, square, rounded squares
 ...
 &lt;/</span><span style="color:#ff79c6;">body</span><span style="color:#f8f8f2;">&gt;
 </span></code></pre>
-<p><code>Viewport</code> is basically the area visible to the user. We use the <code>meta[name=viewport]</code> tag to configure it.</p>
+<p><code>Viewport</code> is the area visible to the user. We use the <code>meta[name=viewport]</code> tag to configure it.</p>
 <p><code>Theme Color</code> is used as the background for status bars in mobile. We use the <code>meta[name=theme-color]</code> tag to configure it.</p>
 <p>We also need to set the <code>apple-touch-icon</code> so the app behaves well on iOS.</p>
-<p>And lastly we will need to load up the <code>manifest</code> file &amp; <code>serviceWorker</code> files.</p>
+<p>And lastly, we will need to load up the <code>manifest</code> file &amp; <code>serviceWorker</code> files.</p>
 <h1 id="debugging-issues">Debugging Issues</h1>
-<p>I highly recommend anyone doing web development to benchmark their websites using the Lighthouse functionality in Chrome DevTools.</p>
+<p>I highly recommend anyone doing web development benchmark their websites using the Lighthouse functionality in Chrome DevTools.</p>
 <p><img src="https://rednithin.github.io/blog/3-easiest-way-to-make-a-static-website-into-a-pwa/Lighthouse.png" alt="Lighthouse" /></p>
 <p>To check if your manifest contains any errors you will need to navigate to <code>Application &gt; Manifest</code> in Chrome DevTools.</p>
 <p><img src="https://rednithin.github.io/blog/3-easiest-way-to-make-a-static-website-into-a-pwa/Manifest.png" alt="Manifest Section Dev Tools" /></p>
 <h1 id="conclusion">Conclusion</h1>
-<p>With the above instructions your static website will become a PWA in no time.</p>
+<p>With the above instructions, your static website will become a PWA in no time.</p>
 
     </div>
   </article>
