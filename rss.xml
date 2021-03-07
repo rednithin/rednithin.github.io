@@ -7,7 +7,15 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="https://rednithin.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Sat, 12 Sep 2020 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate>
+        <item>
+            <title>Easiest way to turn a static website into a PWA</title>
+            <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+            <link>https://rednithin.github.io/blog/3-easiest-way-to-make-a-static-website-into-a-pwa/</link>
+            <guid>https://rednithin.github.io/blog/3-easiest-way-to-make-a-static-website-into-a-pwa/</guid>
+            <description>&lt;p&gt;What&#x27;s the easiest way to turn a static website into a PWA? Let&#x27;s find out.&lt;&#x2F;p&gt;
+</description>
+        </item>
         <item>
             <title>Orange Pi 4B Armbian Configuration</title>
             <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>

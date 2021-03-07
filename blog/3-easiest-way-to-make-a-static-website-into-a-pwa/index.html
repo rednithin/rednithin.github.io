@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  <title>
+    Easiest way to turn a static website into a PWA
+  </title>
+  <meta name="description" content="Easiest way to turn a static website into a PWA" />
+
+
+   
+    <link rel="canonical" href="https:&#x2F;&#x2F;rednithin.github.io&#x2F;blog&#x2F;3-easiest-way-to-make-a-static-website-into-a-pwa&#x2F;" />
+   
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+  />
+  <meta name="robots" content="noodp" />
+  
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="https:&#x2F;&#x2F;rednithin.github.io&#x2F;styles&#x2F;styles.css" />
+
+  <!-- Icons -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="https:&#x2F;&#x2F;rednithin.github.io&#x2F;images&#x2F;favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="https:&#x2F;&#x2F;rednithin.github.io&#x2F;images&#x2F;favicon-16x16.png"
+  />
+  <link rel="shortcut icon" href="https:&#x2F;&#x2F;rednithin.github.io&#x2F;images&#x2F;favicon.ico" />
+  <link rel="apple-touch-icon" href="https:&#x2F;&#x2F;rednithin.github.io&#x2F;images&#x2F;apple-touch-icon.png"/>
+  <meta name="theme-color" content="#1a202c">
+  <link rel="manifest" href="https:&#x2F;&#x2F;rednithin.github.io&#x2F;site.webmanifest" />
+
+  <style>
+    #menu-toggle:checked + #menu {
+      display: block;
+    }
+  </style>
+</head>
+<body class="flex flex-col h-screen justify-between dark:bg-gray-800 dark:text-gray-300">
+  
+    <header class="bg-yellow-100 dark:bg-gray-900 md:text-lg shadow-md">
+      <div class="container mx-auto flex flex-wrap items-center justify-between">
+        <div class="font-bold inline-block text-xl md:text-2xl p-4 hover:text-teal-500">
+          <a href="/">\> red.nithin</a>
+        </div>
+        <label for="menu-toggle" class="cursor-pointer md:hidden m-4">
+          <i class="fas fa-angle-double-down"></i>
+        </label>
+        <input class="hidden" type="checkbox" name="menu-toggle" id="menu-toggle">
+        
+        <div 
+          class="hidden md:flex md:items-center md:w-auto w-full border-t md:border-t-0 pt-4 md:pt-0" 
+          id="menu"
+        >
+          <nav>
+            <ul class="md:flex items-center justify-between md:text-left">
+              <li class="block px-4 py-2 md:py-0 hover:font-semibold hover:text-teal-500"><a class="underline md:no-underline" href="/blog">Blog</a></li>
+              <li class="block px-4 py-2 md:py-0 hover:font-semibold hover:text-teal-500"><a class="underline md:no-underline" href="/contact">Contact</a></li>
+              <li class="block px-4 py-2 md:py-0 hover:font-semibold hover:text-teal-500"><a class="underline md:no-underline" href="/about">About</a></li>
+              <li class="block px-4 py-2 md:py-0 hover:font-semibold hover:text-teal-500"><a class="underline md:no-underline" href="/tags">Tags</a></li>
+              <li class="block px-4 py-2 md:py-0 hover:font-semibold hover:text-teal-500"><a class="underline md:no-underline" href="/resume">Resume</a></li>
+            </ul>
+          </nav>
+          <a href="" onclick="toggleTheme()">
+            <img 
+              class="m-4 rounded-full border-2 border-transparent hover:border-teal-500"
+              src="https:&#x2F;&#x2F;rednithin.github.io&#x2F;images&#x2F;android-chrome-192x192.png" 
+              alt="rednithin"
+              width="40px"
+              height="40px"
+            >
+          </a>
+        </div>
+      </div>
+    </header>
+  
+
+  <section class="container mx-auto mt-16 mb-24 px-4 md:px-16 lg:px-40 mb:auto md:text-lg">
+    
+  <article>
+    <h1 class="text-3xl font-bold">
+      <a href="https://rednithin.github.io/blog/3-easiest-way-to-make-a-static-website-into-a-pwa/">Easiest way to turn a static website into a PWA</a>
+    </h1>
+    <div class="mt-2">
+      March 07, 2021 
+      - 5 min read
+      [<i>934 words</i>]
+    </div>
+    <div class="mt-1 mb-4 text-gray-600 dark:text-teal-400">
+      
+        <a class="hover:text-gray-900 dark:hover:text-teal-500" href="/tags/pwa">#pwa</a>
+      
+        <a class="hover:text-gray-900 dark:hover:text-teal-500" href="/tags/workbox">#workbox</a>
+      
+        <a class="hover:text-gray-900 dark:hover:text-teal-500" href="/tags/web">#web</a>
+      
+    </div>
+    <div class="markdown-content">
+      <p>What's the easiest way to turn a static website into a PWA? Let's find out.</p>
+<span id="continue-reading"></span>
+<ul>
+<li><a href="https://rednithin.github.io/blog/3-easiest-way-to-make-a-static-website-into-a-pwa/#what-is-a-pwa">What is a PWA?</a></li>
+<li><a href="https://rednithin.github.io/blog/3-easiest-way-to-make-a-static-website-into-a-pwa/#service-worker">Service Worker</a></li>
+<li><a href="https://rednithin.github.io/blog/3-easiest-way-to-make-a-static-website-into-a-pwa/#sample-manifest-file">Sample Manifest file</a></li>
+<li><a href="https://rednithin.github.io/blog/3-easiest-way-to-make-a-static-website-into-a-pwa/#some-meta-and-link-tags">Some Meta And Link Tags</a></li>
+<li><a href="https://rednithin.github.io/blog/3-easiest-way-to-make-a-static-website-into-a-pwa/#debugging-issues">Debugging Issues</a></li>
+<li><a href="https://rednithin.github.io/blog/3-easiest-way-to-make-a-static-website-into-a-pwa/#conclusion">Conclusion</a></li>
+</ul>
+<h1 id="what-is-a-pwa">What is a PWA?</h1>
+<p>To put it in simple terms it's a web app which behaves as a native app on a respective platform like Linux, Android etc.
+PWA generally consists of 2 main things.</p>
+<ul>
+<li>Service Worker</li>
+<li>Web App Manifest file</li>
+<li>Status Bar, Apple Touch Icon &amp; Viewport</li>
+</ul>
+<h1 id="service-worker">Service Worker</h1>
+<p>So if you want to create a service worker which caches your entire static website for offline use and also does runtime caching.
+It will be a ton of work.</p>
+<ul>
+<li>You will need to learn about <code>lifecycle</code> events. </li>
+<li>If it is safe to upgrade the serviceWorker. </li>
+<li>Clearing old caches </li>
+</ul>
+<p>...and the list goes on.</p>
+<p>Instead of rolling out our own custom logic which frankly takes a lot of time to get right.
+We can go with <a href="https://developers.google.com/web/tools/workbox">workbox</a>.
+Workbox is a library which does all of the above and all we need to do is declaratively specify what we want.</p>
+<pre style="background-color:#282a36;">
+<code class="language-javascript" data-lang="javascript"><span style="font-style:italic;color:#8be9fd;">const </span><span style="color:#ffffff;">workboxBuild </span><span style="color:#ff79c6;">= </span><span style="color:#8be9fd;">require</span><span style="color:#f8f8f2;">(</span><span style="color:#f1fa8c;">&#39;workbox-build&#39;</span><span style="color:#f8f8f2;">);
+
+</span><span style="color:#6272a4;">// NOTE: This should be run *AFTER* all your assets are built
+</span><span style="font-style:italic;color:#8be9fd;">const </span><span style="color:#50fa7b;">buildSW </span><span style="color:#ff79c6;">= </span><span style="color:#f8f8f2;">() </span><span style="font-style:italic;color:#8be9fd;">=&gt; </span><span style="color:#f8f8f2;">{
+  </span><span style="color:#6272a4;">// This will return a Promise
+  </span><span style="color:#ff79c6;">return </span><span style="color:#ffffff;">workboxBuild</span><span style="color:#ff79c6;">.</span><span style="color:#50fa7b;">generateSW</span><span style="color:#f8f8f2;">({
+</span><span style="background-color:#44475a;color:#f8f8f2;">    globDirectory: </span><span style="background-color:#44475a;color:#f1fa8c;">&#39;public&#39;</span><span style="background-color:#44475a;color:#f8f8f2;">,
+</span><span style="color:#f8f8f2;">    globPatterns: [
+</span><span style="background-color:#44475a;color:#f8f8f2;">      </span><span style="background-color:#44475a;color:#f1fa8c;">&#39;**/*.{html,json,js,css}&#39;</span><span style="background-color:#44475a;color:#f8f8f2;">,
+</span><span style="color:#f8f8f2;">    ],
+</span><span style="background-color:#44475a;color:#f8f8f2;">    swDest: </span><span style="background-color:#44475a;color:#f1fa8c;">&#39;public/sw.js&#39;</span><span style="background-color:#44475a;color:#f8f8f2;">,
+</span><span style="color:#f8f8f2;">
+    </span><span style="color:#6272a4;">// Define runtime caching rules.
+    </span><span style="color:#f8f8f2;">runtimeCaching: [{
+      </span><span style="color:#6272a4;">// Match any request that ends with .png, .jpg, .jpeg or .svg.
+</span><span style="background-color:#44475a;color:#f8f8f2;">      urlPattern: </span><span style="background-color:#44475a;color:#f1fa8c;">/</span><span style="background-color:#44475a;color:#ff79c6;">\.</span><span style="background-color:#44475a;color:#f1fa8c;">(?:png</span><span style="background-color:#44475a;color:#ff79c6;">|</span><span style="background-color:#44475a;color:#f1fa8c;">jpg</span><span style="background-color:#44475a;color:#ff79c6;">|</span><span style="background-color:#44475a;color:#f1fa8c;">jpeg</span><span style="background-color:#44475a;color:#ff79c6;">|</span><span style="background-color:#44475a;color:#f1fa8c;">svg)</span><span style="background-color:#44475a;color:#ff79c6;">$</span><span style="background-color:#44475a;color:#f1fa8c;">/</span><span style="background-color:#44475a;color:#f8f8f2;">,
+</span><span style="color:#f8f8f2;">
+      </span><span style="color:#6272a4;">// Apply a stale-while-revalidate strategy.
+</span><span style="background-color:#44475a;color:#f8f8f2;">      handler: </span><span style="background-color:#44475a;color:#f1fa8c;">&#39;StaleWhileRevalidate&#39;</span><span style="background-color:#44475a;color:#f8f8f2;">,
+</span><span style="color:#f8f8f2;">
+      options: {
+        </span><span style="color:#6272a4;">// Use a custom cache name.
+        </span><span style="color:#f8f8f2;">cacheName: </span><span style="color:#f1fa8c;">&#39;images&#39;</span><span style="color:#f8f8f2;">,
+
+        </span><span style="color:#6272a4;">// Only cache 10 images.
+        </span><span style="color:#f8f8f2;">expiration: {
+          maxEntries: </span><span style="color:#bd93f9;">20</span><span style="color:#f8f8f2;">,
+        },
+      },
+    },{
+</span><span style="background-color:#44475a;color:#f8f8f2;">      urlPattern: </span><span style="background-color:#44475a;color:#f1fa8c;">/</span><span style="background-color:#44475a;color:#ff79c6;">\.</span><span style="background-color:#44475a;color:#f1fa8c;">(?:woff</span><span style="background-color:#44475a;color:#ff79c6;">|</span><span style="background-color:#44475a;color:#f1fa8c;">woff2</span><span style="background-color:#44475a;color:#ff79c6;">|</span><span style="background-color:#44475a;color:#f1fa8c;">ttf</span><span style="background-color:#44475a;color:#ff79c6;">|</span><span style="background-color:#44475a;color:#f1fa8c;">eot)</span><span style="background-color:#44475a;color:#ff79c6;">$</span><span style="background-color:#44475a;color:#f1fa8c;">/</span><span style="background-color:#44475a;color:#f8f8f2;">,
+</span><span style="color:#f8f8f2;">
+      </span><span style="color:#6272a4;">// Apply a cache-first strategy.
+</span><span style="background-color:#44475a;color:#f8f8f2;">      handler: </span><span style="background-color:#44475a;color:#f1fa8c;">&#39;CacheFirst&#39;</span><span style="background-color:#44475a;color:#f8f8f2;">,
+</span><span style="color:#f8f8f2;">
+      options: {
+        </span><span style="color:#6272a4;">// Use a custom cache name.
+        </span><span style="color:#f8f8f2;">cacheName: </span><span style="color:#f1fa8c;">&#39;fonts&#39;</span><span style="color:#f8f8f2;">,
+
+        </span><span style="color:#6272a4;">// Only cache 20 fonts.
+        </span><span style="color:#f8f8f2;">expiration: {
+          maxEntries: </span><span style="color:#bd93f9;">20</span><span style="color:#f8f8f2;">,
+          maxAgeSeconds: </span><span style="color:#bd93f9;">7</span><span style="color:#ff79c6;">* </span><span style="color:#bd93f9;">24 </span><span style="color:#ff79c6;">* </span><span style="color:#bd93f9;">60 </span><span style="color:#ff79c6;">* </span><span style="color:#bd93f9;">60
+        </span><span style="color:#f8f8f2;">},
+      },
+    }
+  ],
+  });
+};
+
+</span><span style="color:#50fa7b;">buildSW</span><span style="color:#f8f8f2;">();
+</span></code></pre>
+<p>The above code generates a service worker file with <code>pre-caching</code> and <code>runtime caching</code></p>
+<p>Pre-caching is basically downloading all the files ahead of time so all of them are served from the cache whenever we request for a specific page or asset. Pre-caching is usually done right after your website loads. This is how we can make our app truly offline because we will downloading the entire website on the initial load. (Point to note that pre-caching happens after your initial page load is done. So it doesn't affect your website initial load times/render times). <code>globPatterns</code> determines what files will be pre-cached.</p>
+<p>Runtime caching is basically caching on the fly. In the above example you can see that I am caching all the images/fonts using runtime caching. That is as soon as a request for a image/font happens it will also be cached at that point, so from next time onwards it will be fetched from the cache. </p>
+<p>Also a thing to keep in mind are the various strategies workbox provides.</p>
+<p>For images I have used <code>StaleWhileRevalidate</code> strategy which basically serves the image from cache then checks/updates the image to be up-to-date.</p>
+<p>As for the fonts I have used <code>CacheFirst</code> strategy which basically serves it from cache if it exists otherwise it fetches it from the network. CacheFirst strategy makes sense for fonts they don't change.</p>
+<h1 id="sample-manifest-file">Sample Manifest file</h1>
+<pre style="background-color:#282a36;">
+<code class="language-json" data-lang="json"><span style="color:#f8f8f2;">{
+  </span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">name</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">:</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">Init Thyself</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">,
+  </span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">short_name</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">:</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">iThyself</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">,
+  </span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">icons</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">:[
+    {
+      </span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">src</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">:</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">/images/android-chrome-192x192.png</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">,
+      </span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">sizes</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">:</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">192x192</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">,
+      </span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">type</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">:</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">image/png</span><span style="color:#eeeeee;">&quot;
+    </span><span style="color:#f8f8f2;">},
+    {
+      </span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">src</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">:</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">/images/android-chrome-512x512.png</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">,
+      </span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">sizes</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">:</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">512x512</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">,
+      </span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">type</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">:</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">image/png</span><span style="color:#eeeeee;">&quot;
+    </span><span style="color:#f8f8f2;">},
+    {
+      </span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">src</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">: </span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">/images/maskable_icon.png</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">,
+      </span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">sizes</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">: </span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">192x192</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">,
+      </span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">type</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">: </span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">image/png</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">,
+</span><span style="background-color:#44475a;color:#f8f8f2;">      </span><span style="background-color:#44475a;color:#eeeeee;">&quot;</span><span style="background-color:#44475a;color:#f1fa8c;">purpose</span><span style="background-color:#44475a;color:#eeeeee;">&quot;</span><span style="background-color:#44475a;color:#f8f8f2;">: </span><span style="background-color:#44475a;color:#eeeeee;">&quot;</span><span style="background-color:#44475a;color:#f1fa8c;">any maskable</span><span style="background-color:#44475a;color:#eeeeee;">&quot;
+</span><span style="color:#f8f8f2;">    }
+  ],
+  </span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">start_url</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">: </span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">.</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">,
+  </span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">theme_color</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">:</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">#ffffff</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">,
+  </span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">background_color</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">:</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">#ffffff</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">,
+  </span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">display</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f8f8f2;">:</span><span style="color:#eeeeee;">&quot;</span><span style="color:#f1fa8c;">standalone</span><span style="color:#eeeeee;">&quot;
+</span><span style="color:#f8f8f2;">}
+</span></code></pre>
+<p>So the main thing you will notice is that you will need icons.
+For my blog the icons are generated from <a href="https://favicon.io/">favicon.io</a>.</p>
+<p>This website will give your logo in multiple formats and sized which you can use directly.</p>
+<p>If you notice along with the icons we also need something known as a <code>maskable icon</code>.
+It's an icon which can be dynamically modified to ovals, square, rounded squares etc by an icon pack on Android to make it feel familiar with the theme.</p>
+<p>You can easily convert any icon into a maskable icon from here <a href="https://maskable.app/">maskable.app</a></p>
+<h1 id="some-meta-and-link-tags">Some Meta And Link Tags</h1>
+<pre style="background-color:#282a36;">
+<code class="language-html" data-lang="html"><span style="color:#f8f8f2;">&lt;</span><span style="color:#ff79c6;">head</span><span style="color:#f8f8f2;">&gt;
+  ...
+  </span><span style="color:#6272a4;">&lt;!-- Viewport --&gt;
+  </span><span style="color:#f8f8f2;">&lt;</span><span style="color:#ff79c6;">meta
+    </span><span style="color:#50fa7b;">name</span><span style="color:#f8f8f2;">=</span><span style="color:#f1fa8c;">&quot;viewport&quot;
+    </span><span style="color:#50fa7b;">content</span><span style="color:#f8f8f2;">=</span><span style="color:#f1fa8c;">&quot;width=device-width, initial-scale=1.0, maximum-scale=5.0&quot;
+  </span><span style="color:#f8f8f2;">/&gt;
+
+  </span><span style="color:#6272a4;">&lt;!-- Icons --&gt;
+  </span><span style="color:#f8f8f2;">&lt;</span><span style="color:#ff79c6;">link
+    </span><span style="color:#50fa7b;">rel</span><span style="color:#f8f8f2;">=</span><span style="color:#f1fa8c;">&quot;icon&quot;
+    </span><span style="color:#50fa7b;">type</span><span style="color:#f8f8f2;">=</span><span style="color:#f1fa8c;">&quot;image/png&quot;
+    </span><span style="color:#50fa7b;">sizes</span><span style="color:#f8f8f2;">=</span><span style="color:#f1fa8c;">&quot;32x32&quot;
+    </span><span style="color:#50fa7b;">href</span><span style="color:#f8f8f2;">=</span><span style="color:#f1fa8c;">&quot;/images/favicon-32x32.png&quot;
+  </span><span style="color:#f8f8f2;">/&gt;
+  &lt;</span><span style="color:#ff79c6;">link
+    </span><span style="color:#50fa7b;">rel</span><span style="color:#f8f8f2;">=</span><span style="color:#f1fa8c;">&quot;icon&quot;
+    </span><span style="color:#50fa7b;">type</span><span style="color:#f8f8f2;">=</span><span style="color:#f1fa8c;">&quot;image/png&quot;
+    </span><span style="color:#50fa7b;">sizes</span><span style="color:#f8f8f2;">=</span><span style="color:#f1fa8c;">&quot;16x16&quot;
+    </span><span style="color:#50fa7b;">href</span><span style="color:#f8f8f2;">=</span><span style="color:#f1fa8c;">&quot;/images/favicon-16x16.png&quot;
+  </span><span style="color:#f8f8f2;">/&gt;
+  &lt;</span><span style="color:#ff79c6;">link </span><span style="color:#50fa7b;">rel</span><span style="color:#f8f8f2;">=</span><span style="color:#f1fa8c;">&quot;shortcut icon&quot; </span><span style="color:#50fa7b;">href</span><span style="color:#f8f8f2;">=</span><span style="color:#f1fa8c;">&quot;/images/favicon.ico&quot; </span><span style="color:#f8f8f2;">/&gt;
+  &lt;</span><span style="color:#ff79c6;">link </span><span style="color:#50fa7b;">rel</span><span style="color:#f8f8f2;">=</span><span style="color:#f1fa8c;">&quot;apple-touch-icon&quot; </span><span style="color:#50fa7b;">href</span><span style="color:#f8f8f2;">=</span><span style="color:#f1fa8c;">&quot;/images/apple-touch-icon.png&quot;</span><span style="color:#f8f8f2;">/&gt;
+
+  </span><span style="color:#6272a4;">&lt;!-- Theme Color --&gt;
+  </span><span style="color:#f8f8f2;">&lt;</span><span style="color:#ff79c6;">meta </span><span style="color:#50fa7b;">name</span><span style="color:#f8f8f2;">=</span><span style="color:#f1fa8c;">&quot;theme-color&quot; </span><span style="color:#50fa7b;">content</span><span style="color:#f8f8f2;">=</span><span style="color:#f1fa8c;">&quot;#1a202c&quot;</span><span style="color:#f8f8f2;">&gt;
+
+  </span><span style="color:#6272a4;">&lt;!-- Load Manifest --&gt;
+  </span><span style="color:#f8f8f2;">&lt;</span><span style="color:#ff79c6;">link </span><span style="color:#50fa7b;">rel</span><span style="color:#f8f8f2;">=</span><span style="color:#f1fa8c;">&quot;manifest&quot; </span><span style="color:#50fa7b;">href</span><span style="color:#f8f8f2;">=</span><span style="color:#f1fa8c;">&quot;/site.webmanifest&quot; </span><span style="color:#f8f8f2;">/&gt;
+  ...
+&lt;/</span><span style="color:#ff79c6;">head</span><span style="color:#f8f8f2;">&gt;
+&lt;</span><span style="color:#ff79c6;">body</span><span style="color:#f8f8f2;">&gt;
+...
+  &lt;</span><span style="color:#ff79c6;">script</span><span style="color:#f8f8f2;">&gt;
+    </span><span style="color:#ff79c6;">if </span><span style="color:#f8f8f2;">(</span><span style="color:#f1fa8c;">&#39;serviceWorker&#39; </span><span style="color:#ff79c6;">in </span><span style="font-style:italic;color:#66d9ef;">navigator</span><span style="color:#f8f8f2;">) </span><span style="color:#ffffff;">{
+      </span><span style="font-style:italic;color:#66d9ef;">navigator</span><span style="color:#ff79c6;">.</span><span style="color:#f8f8f2;">serviceWorker</span><span style="color:#ff79c6;">.</span><span style="color:#50fa7b;">register</span><span style="color:#f8f8f2;">(</span><span style="color:#f1fa8c;">&#39;/sw.js&#39;</span><span style="color:#f8f8f2;">);
+    </span><span style="color:#ffffff;">}
+  </span><span style="color:#f8f8f2;">&lt;/</span><span style="color:#ff79c6;">script</span><span style="color:#f8f8f2;">&gt;
+...
+&lt;/</span><span style="color:#ff79c6;">body</span><span style="color:#f8f8f2;">&gt;
+</span></code></pre>
+<p><code>Viewport</code> is basically the area visible to the user. We use the <code>meta[name=viewport]</code> tag to configure it.</p>
+<p><code>Theme Color</code> is used as the background for status bars in mobile. We use the <code>meta[name=theme-color]</code> tag to configure it.</p>
+<p>We also need to set the <code>apple-touch-icon</code> so the app behaves well on iOS.</p>
+<p>And lastly we will need to load up the <code>manifest</code> file &amp; <code>serviceWorker</code> files.</p>
+<h1 id="debugging-issues">Debugging Issues</h1>
+<p>I highly recommend anyone doing web development to benchmark their websites using the Lighthouse functionality in Chrome DevTools.</p>
+<p><img src="https://rednithin.github.io/blog/3-easiest-way-to-make-a-static-website-into-a-pwa/Lighthouse.png" alt="Lighthouse" /></p>
+<p>To check if your manifest contains any errors you will need to navigate to <code>Application &gt; Manifest</code> in Chrome DevTools.</p>
+<p><img src="https://rednithin.github.io/blog/3-easiest-way-to-make-a-static-website-into-a-pwa/Manifest.png" alt="Manifest Section Dev Tools" /></p>
+<h1 id="conclusion">Conclusion</h1>
+<p>With the above instructions your static website will become a PWA in no time.</p>
+
+    </div>
+  </article>
+
+  <hr class="mt-24">
+
+  
+    <div class="text-center mt-24">
+      
+      
+        <a  href="https://rednithin.github.io/blog/2-orangepi-config/" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 px-4 rounded inline-flex items-center">
+          <span class="pr-2">Orange Pi 4B Armbian Configuration</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      
+    </div>
+  
+
+  </section>
+
+  
+    <footer class="bg-yellow-100 dark:bg-gray-900 md:text-lg border-t-2 border-yellow-400">
+      <div class="container mx-auto flex flex-wrap items-center justify-between py-6 px-4">
+        <div class="font-bold text-xl md:text-2xl hover:text-teal-500 hidden md:inline-block">
+          <a href="/">\> red.nithin</a>
+        </div>
+        <div class="text-xl">
+          <a class="mr-3" target="_blank" href="/rss.xml" aria-label="RSS Feed">
+            <i class="fas fa-rss hover:text-teal-500"></i>
+          </a>
+          <a class="mr-3" target="_blank" href="mailto:reddy.nithinpg@gmail.com" aria-label="Mail To">
+            <i class="fas fa-envelope hover:text-teal-500"></i>
+          </a>
+          <a class="mr-3" target="_blank" rel="noopener noreferrer" href="https://github.com/rednithin" aria-label="Github">
+            <i class="fab fa-github hover:text-teal-500"></i>
+          </a>
+          <a class="mr-3" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/rednithin/" aria-label="Linkedin">
+            <i class="fab fa-linkedin hover:text-teal-500"></i>
+          </a>
+        </div>
+        <p class="text-sm text-gray-500">
+          © 2020 Nithin Reddy
+        </p>
+      </div>
+    </footer>
+  
+
+  <!-- Font CSS -->
+  <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> -->
+  <script src="https://kit.fontawesome.com/92ff89e6d7.js" crossorigin="anonymous" async></script>
+  <link rel="stylesheet" href="https:&#x2F;&#x2F;rednithin.github.io&#x2F;styles&#x2F;font.css" />
+
+  <script src="https:&#x2F;&#x2F;rednithin.github.io&#x2F;js&#x2F;theme.js" defer></script>
+</body>
+</html>
